@@ -1,0 +1,122 @@
+{
+  "basics": {
+    "name": "Ryan Marks",
+    "label": "Software Developer",
+    "picture": "",
+    "email": "ryanmarks151@gmail.com",
+    "phone": "(416) 678-0185",
+    "website": "",
+    "summary": "",
+    "location": {
+      "address": "200 Bessborough Drive",
+      "postalCode": "M4G 3K1",
+      "city": "Toronto",
+      "countryCode": "CA",
+      "region": "Ontario",
+      "regionCode": "ON"
+    },
+    "profiles": [
+    {
+      "network": "Github",
+      "username": "ryanmarks",
+      "url": "https://github.com/ryanmarks"
+      }]
+  },
+  "work": [{
+    "company": "Orbcare Inc.",
+    "position": "R&D Contractor\nSoftware R&D Intern",
+    "website": "https://orbcare.com/",
+    "startDate": "2019-05-01",
+    "endDate": "Present",
+    "location": "Toronto, ON",
+    "summary": "Worked on a team that developed Orbcare's medical practice software using Ruby on Rails and Ember JS",
+    "highlights": [
+	"Performed research and production development to integrate clinics' phone systems with Orbcare, reducing call times",
+	"Reduced developer setup time from a day to 20 minutes by dockerizing the application",
+	"Integrated other clinic management systems with Orbcare using OAuth and REST APIs"
+    ]
+  },
+  {
+    "company": "PortfolioLink",
+    "position": "Sole Proprietor",
+    "website": "",
+    "startDate":"2017-03-01",
+    "endDate": "2017-11-18",
+    "summary": "Spun off a contract solution for investment portfolio managers into a SAAS business",
+    "highlights": [
+      "Independently developed a complete minimum viable product using Django",
+      "Created Postgres views to derive position data causing a 4x speedup over Python ",
+      "Sold intellectual property and code to a customer bringing the software in-house "
+    ]
+  },{
+    "company": "CIBC Live Labs",
+    "position": "Innovation Engineer Co-op",
+    "website": "https://www.cibc.com/ca/livelabs/index.html",
+    "startDate":"2019-05-01",
+    "endDate": "2019-08-31",
+    "summary": "Lead a co-op team in development of a Java natural language bot for personal banking",
+    "highlights": [
+      "Served as developer and Natural Language specialist for all co-op Android team ",
+      "Developed prototype natural language search solution to compete with vendor proposals",
+      "Collaborated in a Scrum team with story writing, sprint planning, and code review"
+    ]
+  },{
+    "company": "Intrinsyc Technologies",
+    "position": "Software Engineering Co-op",
+    "website": "https://www.intrinsyc.com/",
+    "startDate":"2015-05-01",
+    "endDate": "2015-07-30",
+    "summary": "Developed a QA Android app that made factory testing 4x faster. Implemented a secure update utility for flashing Qualcomm devices.",
+    "highlights": []
+  },{
+    "company": "Sunnybrook Research Institute",
+    "position": "Focused Ultrasound Research Student",
+    "website": "https://sunnybrook.ca/research/content/?page=sri-groups-fus",
+    "startDate":"2014-07-01",
+    "endDate": "2014-08-31",
+    "summary": "Analyzed ultrasound signals for an experimental brain imaging modality. Sped up analysis of animal experiments by 10x with computer vision.",
+    "highlights": []
+  },{
+    "company": "Tremco Inc",
+    "position": "Engineering Co-op",
+    "website": "https://www.tremcoinc.com/",
+    "startDate":"2014-02-01",
+    "endDate": "2014-06-30",
+    "summary": "Developed spreadsheets for manufacturing time regressions and quality tracking. Implemented web interfaces for HVAC monitoring.",
+    "highlights": []
+  }
+
+],
+  "education": [{
+    "institution": "McMaster University",
+    "area": "Bachelor of Engineering\nSoftware Engineering",
+    "studyType": "Bachelor",
+    "startDate": "2014-09-01",
+    "endDate": "Present",
+    "gpa": "3.1",
+    "courses": [
+    ],
+    "summary": "Expected completion: April 2020"
+  }],
+  "publications": [{
+    "name": "Anterior EEG Cross-Frequency Correlation in Preoperative Anxiety",
+    "publisher": "J. Sriranjan, C. Chow,\nR. Marks, & L. Schmidt",
+    "releaseDate": "2019-03-01",
+    "website": "",
+    "summary": "Developed signal processing algorithms to isolate EEG activity levels in pediatric surgery patients before surgery to examine anxiety."
+  },{
+    "name": "Project Julius - Epilepsy Safety Tool",
+    "publisher": "1st Place at Deltahacks",
+    "releaseDate": "2015-02-01",
+    "website": "https://devpost.com/software/project-julius-2br2v",
+    "summary": "Project Julius protects people with photosensitive epilepsy from flashing content that could cause a seizure by detecting and blocking it in less than a second. Built using Python and OpenCV."
+  },{
+    "name": "Curatio - Post-Stroke Physical Therapy",
+    "publisher": "Hack Duke 2014",
+    "releaseDate": "2014-11-01",
+    "website": "https://devpost.com/software/curatio-9fspf",
+    "summary": "Curation helps stroke survivors with weakness in one hand. Using the idea of mirror box therapy, a patient wears two gloves, one measures the postioning of the fingers, and the other mirrors it. Built using Arduino."
+  }
+],
+"volunteer": []
+}

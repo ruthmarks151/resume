@@ -1,0 +1,643 @@
+<!--
+hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./helpers/monthFormat.js --data resume_2019-09-18.json resume.hbs
+-->
+<body class="markdown-body">
+  <div style="border-style: hidden; width: 8.5in; height: 11in; padding: 0.125in 0.25in 0.125in 0.25in; margin: 0em;">
+    <div class="container" style="line-height: 1.1">
+			<div class="big_col">
+        <h1 style="font-size: 4.5em;">
+          Ryan Marks
+        </h1>
+      </div>
+      <div class="small_col" style="margin-bottom: auto; margin-top: auto; flex-basis: 45%;">
+        <span style="float: right; text-align: right;">
+          <span style="font-weight: 400; font-size: 14px;">
+            	200 Bessborough Drive, Toronto, ON, M4G 3K1<br>
+            ryanmarks151@gmail.com <br>
+            (416) 678-0185 <br>
+          </span>
+	          <svg style="width:16px;height:16px; margin: -4px;" viewBox="0 0 24 24">
+	            <path fill="#000000" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+	          </svg>
+          <a href="https://github.com/ryanmarks">
+            ryanmarks
+          </a>
+					<br>
+        </span>
+      </div>
+    </div>
+
+    <style>
+      .container {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .big_col{
+        flex-grow: 1;
+        flex-basis: 50%;
+        margin: auto;
+        /* display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start; */
+      }
+
+      .small_col{
+        flex-grow: 0;
+        flex-basis: 32%;
+        margin: auto;
+      }
+
+      .big_col, .small_col {
+        margin-top: 0;
+        margin-left: 4px;
+        margin-right: 4px;
+      }
+
+      .underlined {
+        border-bottom: 1px solid #24292e;
+      }
+    </style>
+
+    <div class="container">
+      <div class="big_col">
+        <table>
+          <tr class="header-row">
+            <td colspan="2">
+              <h1>Work Experience</h1>
+            </td>
+          </tr>
+
+					<tr>
+						 <td>
+								<div style="margin-top: 4px"></div>
+						 </td>
+					</tr>
+					<tr class="job-row">
+
+						 <td class="details-col">
+								<h3><a href="https://orbcare.com/">Orbcare Inc.</a></h3>
+								<br>
+								<h4>R&amp;D Contractor
+Software R&amp;D Intern</h4>
+								<br>
+								<h5>May 2019 - Present</h5>
+								<br>
+								<h5>Toronto, ON</h5>
+						 </td>
+						 <td>
+								<ul>
+									 <li>Worked on a team that developed Orbcare&#x27;s medical practice software using Ruby on Rails and Ember JS</li>
+									 <li>Performed research and production development to integrate clinics&#x27; phone systems with Orbcare, reducing call times</li>
+									 <li>Reduced developer setup time from a day to 20 minutes by dockerizing the application</li>
+									 <li>Integrated other clinic management systems with Orbcare using OAuth and REST APIs</li>
+								</ul>
+						 </td>
+					</tr>
+					<tr>
+						 <td>
+								<div style="margin-top: 4px"></div>
+						 </td>
+					</tr>
+					<tr class="job-row">
+
+						 <td class="details-col">
+								<h3><a href="">PortfolioLink</a></h3>
+								<br>
+								<h4>Sole Proprietor</h4>
+								<br>
+								<h5>Mar. 2017 - Nov. 2017</h5>
+								<br>
+								<h5></h5>
+						 </td>
+						 <td>
+								<ul>
+									 <li>Spun off a contract solution for investment portfolio managers into a SAAS business</li>
+									 <li>Independently developed a complete minimum viable product using Django</li>
+									 <li>Created Postgres views to derive position data causing a 4x speedup over Python </li>
+									 <li>Sold intellectual property and code to a customer bringing the software in-house </li>
+								</ul>
+						 </td>
+					</tr>
+					<tr>
+						 <td>
+								<div style="margin-top: 4px"></div>
+						 </td>
+					</tr>
+					<tr class="job-row">
+
+						 <td class="details-col">
+								<h3><a href="https://www.cibc.com/ca/livelabs/index.html">CIBC Live Labs</a></h3>
+								<br>
+								<h4>Innovation Engineer Co-op</h4>
+								<br>
+								<h5>May 2019 - Aug. 2019</h5>
+								<br>
+								<h5></h5>
+						 </td>
+						 <td>
+								<ul>
+									 <li>Lead a co-op team in development of a Java natural language bot for personal banking</li>
+									 <li>Served as developer and Natural Language specialist for all co-op Android team </li>
+									 <li>Developed prototype natural language search solution to compete with vendor proposals</li>
+									 <li>Collaborated in a Scrum team with story writing, sprint planning, and code review</li>
+								</ul>
+						 </td>
+					</tr>
+					<tr>
+						 <td>
+								<div style="margin-top: 4px"></div>
+						 </td>
+					</tr>
+					<tr class="job-row">
+
+					 		<td>
+								<h3><a href="https://www.intrinsyc.com/">Intrinsyc Technologies</a></h3>
+								<br>
+								<h4>Software Engineering Co-op</h4>
+								<span style="float: right; text-align: right;">
+									<h5>May 2015 - Jul. 2015</h5>
+								</span>
+								<h5>  </h5>
+								<br>
+								<p>
+									Developed a QA Android app that made factory testing 4x faster. Implemented a secure update utility for flashing Qualcomm devices.
+								</p>
+							</td>
+					</tr>
+					<tr>
+						 <td>
+								<div style="margin-top: 4px"></div>
+						 </td>
+					</tr>
+					<tr class="job-row">
+
+					 		<td>
+								<h3><a href="https://sunnybrook.ca/research/content/?page&#x3D;sri-groups-fus">Sunnybrook Research Institute</a></h3>
+								<br>
+								<h4>Focused Ultrasound Research Student</h4>
+								<span style="float: right; text-align: right;">
+									<h5>Jul. 2014 - Aug. 2014</h5>
+								</span>
+								<h5>  </h5>
+								<br>
+								<p>
+									Analyzed ultrasound signals for an experimental brain imaging modality. Sped up analysis of animal experiments by 10x with computer vision.
+								</p>
+							</td>
+					</tr>
+					<tr>
+						 <td>
+								<div style="margin-top: 4px"></div>
+						 </td>
+					</tr>
+					<tr class="job-row">
+
+					 		<td>
+								<h3><a href="https://www.tremcoinc.com/">Tremco Inc</a></h3>
+								<br>
+								<h4>Engineering Co-op</h4>
+								<span style="float: right; text-align: right;">
+									<h5>Feb. 2014 - Jun. 2014</h5>
+								</span>
+								<h5>  </h5>
+								<br>
+								<p>
+									Developed spreadsheets for manufacturing time regressions and quality tracking. Implemented web interfaces for HVAC monitoring.
+								</p>
+							</td>
+					</tr>
+
+      </table>
+      </div>
+      <div class="small_col">
+        <table width="100%" style="display: inline-block;">
+          <tr class="header-row">
+            <td colspan="2">
+              <h1>Education</h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div style="margin-top: 4px"></div>
+            </td>
+          </tr>
+
+          <tr class="employer-row">
+            <td>
+              <h3>McMaster University</h3>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <h4>
+                Bachelor of Engineering<br>Software Engineering
+              </h4>
+              <br>
+              <h5>Sep. 2014 - Present</h5>
+              <br>
+
+              <p style="margin-top: 4px">
+                3.1/4.0 equivalent GPA
+                <br>
+                Expected completion: April 2020
+              </p>
+            </td>
+          </tr>
+
+          <tr class="header-row">
+            <td colspan="2">
+              <h1>Projects</h1>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>
+              <div style="margin-top: 4px"></div>
+            </td>
+          </tr>
+
+          <tr class="employer-row">
+            <td>
+              <h3>
+                <a href="">
+									Anterior EEG Cross-Frequency Correlation in Preoperative Anxiety
+								</a>
+              </h3>
+            </td>
+          </tr>
+          <tr class="underlined">
+            <td colspan="2">
+              <!--p style="margin-bottom: 0;"><i>
+                J. Sriranjan, C. Chow, R. Marks, & L. Schmidt
+              </i>
+            </p-->
+						<h4>J. Sriranjan, C. Chow,<br>R. Marks, &amp; L. Schmidt</h4><br>
+            <h5>Mar. 2019</h5>
+            <p style="margin-top: 4px">
+              Developed signal processing algorithms to isolate EEG activity levels in pediatric surgery patients before surgery to examine anxiety.
+            </p>
+          </td>
+        </tr>
+
+        <tr style="height: 0.25em">
+        </tr>
+
+          <tr>
+            <td>
+              <div style="margin-top: 4px"></div>
+            </td>
+          </tr>
+
+          <tr class="employer-row">
+            <td>
+              <h3>
+                <a href="https://devpost.com/software/project-julius-2br2v">
+									Project Julius - Epilepsy Safety Tool
+								</a>
+              </h3>
+            </td>
+          </tr>
+          <tr class="underlined">
+            <td colspan="2">
+              <!--p style="margin-bottom: 0;"><i>
+                J. Sriranjan, C. Chow, R. Marks, & L. Schmidt
+              </i>
+            </p-->
+						<h4>1st Place at Deltahacks</h4><br>
+            <h5>Feb. 2015</h5>
+            <p style="margin-top: 4px">
+              Project Julius protects people with photosensitive epilepsy from flashing content that could cause a seizure by detecting and blocking it in less than a second. Built using Python and OpenCV.
+            </p>
+          </td>
+        </tr>
+
+        <tr style="height: 0.25em">
+        </tr>
+
+          <tr>
+            <td>
+              <div style="margin-top: 4px"></div>
+            </td>
+          </tr>
+
+          <tr class="employer-row">
+            <td>
+              <h3>
+                <a href="https://devpost.com/software/curatio-9fspf">
+									Curatio - Post-Stroke Physical Therapy
+								</a>
+              </h3>
+            </td>
+          </tr>
+          <tr class="underlined">
+            <td colspan="2">
+              <!--p style="margin-bottom: 0;"><i>
+                J. Sriranjan, C. Chow, R. Marks, & L. Schmidt
+              </i>
+            </p-->
+						<h4>Hack Duke 2014</h4><br>
+            <h5>Nov. 2014</h5>
+            <p style="margin-top: 4px">
+              Curation helps stroke survivors with weakness in one hand. Using the idea of mirror box therapy, a patient wears two gloves, one measures the postioning of the fingers, and the other mirrors it. Built using Arduino.
+            </p>
+          </td>
+        </tr>
+
+        <tr style="height: 0.25em">
+        </tr>
+
+
+
+      </table>
+      </div>
+    </div>
+
+</div>
+</body>
+
+<style>
+  .details-col {
+    vertical-align: top;
+    width: 33.33%;
+  }
+
+
+  .marrkdown-body .outer-table {
+    display: table;
+  }
+
+  .markdown-body table {
+    border: 0;
+    display: table;
+  }
+
+  .markdown-body .header-row {
+    border-bottom: 3px solid #24292e;
+     display: inline-block;
+  }
+
+  .markdown-body .job-row {
+    border-bottom: 1px solid #24292e;
+    display: inline-block;
+  }
+
+  .markdown-body .job-row td {
+    padding-top: 4px;
+    padding-bottom: 0px;
+
+  }
+
+  .markdown-body .header-row h1 {
+    font-size: 2.5em;
+    margin: 0.67em 0
+  }
+
+  .markdown-body .header-row h2 {
+    margin-top: 5em;
+  }
+
+  .markdown-body .employer-row h3 {}
+
+  .markdown-body table h4 {
+    font-weight: 400;
+  }
+
+  .markdown-body table h5 {
+    font-weight: 400;
+  }
+
+  .markdown-body .role-row td {
+    padding-bottom: 2px;
+  }
+
+  .markdown-body ul,
+  .markdown-body p {
+    margin-bottom: 12px;
+    margin-top: 2px;
+    font-size: 0.95em;
+    font-family: "Helvetica";
+    font-weight: 400;
+  }
+
+  .markdown-body h3,
+  .markdown-body h4,
+  .markdown-body h5,
+  .markdown-body h6 {
+    margin-bottom: 3px;
+    margin-top: 3px;
+
+  }
+
+  .markdown-body table ul {
+    padding-left: 1em;
+  }
+
+  .markdown-body {
+    margin: 0;
+  }
+</style>
+
+<style>
+  .markdown-body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.5;
+    color: #24292e;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word
+  }
+
+  .markdown-body a {
+    background-color: transparent
+  }
+
+  .markdown-body a:active,
+  .markdown-body a:hover {
+    outline-width: 0
+  }
+
+  .markdown-body code {
+    font-family: monospace, monospace;
+    font-size: 1em
+  }
+
+  .markdown-body [type=checkbox] {
+    box-sizing: border-box;
+    padding: 0
+  }
+
+  .markdown-body * {
+    box-sizing: border-box
+  }
+
+  .markdown-body a {
+    color: #24292e;
+    old-colorr: #0366d6;
+    text-decoration: none
+  }
+
+  .markdown-body a:hover {
+    text-decoration: underline
+  }
+
+  .markdown-body table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .markdown-body td {
+    padding: 0;
+  }
+
+  .markdown-body tr {
+    width: 100%;
+  }
+  .markdown-body h1,
+  .markdown-body h2,
+  .markdown-body h3,
+  .markdown-body h4,
+  .markdown-body h5,
+  .markdown-body h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline
+  }
+
+  .markdown-body h1 {
+    font-size: 32px;
+    font-weight: 600
+  }
+
+  .markdown-body h2 {
+    font-size: 24px;
+    font-weight: 600
+  }
+
+  .markdown-body h3 {
+    font-size: 20px;
+    font-weight: 600
+  }
+
+  .markdown-body h4 {
+    font-size: 16px;
+    font-weight: 600
+  }
+
+  .markdown-body h5 {
+    font-size: 14px;
+    font-weight: 600
+  }
+
+  .markdown-body h6 {
+    font-size: 12px;
+    font-weight: 600
+  }
+
+  .markdown-body ul {
+    padding-left: 0
+  }
+
+  .markdown-body code {
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 10px
+  }
+
+  .markdown-body::before {
+    display: table;
+    content: ""
+  }
+
+  .markdown-body::after {
+    display: table;
+    clear: both;
+    content: ""
+  }
+
+  .markdown-body>:first-child {
+    margin-top: 0 !important
+  }
+
+  .markdown-body>:last-child {
+    margin-bottom: 0 !important
+  }
+
+  .markdown-body a:not([href]) {
+    color: inherit;
+    text-decoration: none
+  }
+
+  .markdown-body h1 {
+    font-size: 2em;
+  }
+
+  .markdown-body h2 {
+    font-size: 1.5em
+  }
+
+  .markdown-body h3 {
+    font-size: 1.25em
+  }
+
+  .markdown-body h4 {
+    font-size: 1em
+  }
+
+  .markdown-body h5 {
+    font-size: .875em
+  }
+
+  .markdown-body h6 {
+    font-size: .85em;
+    color: #6a737d
+  }
+
+  .markdown-body ul {
+    padding-left: 2em
+  }
+
+  .markdown-body ul ul {
+    margin-top: 0;
+    margin-bottom: 0
+  }
+
+  .markdown-body li {
+    word-wrap: break-all
+  }
+
+  .markdown-body li+li {
+    margin-top: .25em
+  }
+
+  .markdown-body code {
+    padding: .2em .4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27, 31, 35, .05);
+    border-radius: 3px
+  }
+
+  @media print {
+    tr.vendorListHeading {
+      background-color: #1a4567 !important;
+      -webkit-print-color-adjust: exact;
+    }
+  }
+
+  @media print {
+    .vendorListHeading th {
+      color: white !important;
+    }
+  }
+</style>
