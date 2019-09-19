@@ -8,6 +8,14 @@
     "website": "",
     "summary": "",
     "location": {
+      "address": "57 Mericourt Road",
+      "postalCode": "L8S 2N5",
+      "city": "Hamilton",
+      "countryCode": "CA",
+      "region": "Ontario",
+      "regionCode": "ON"
+    },
+    "toronto": {
       "address": "200 Bessborough Drive",
       "postalCode": "M4G 3K1",
       "city": "Toronto",
@@ -28,13 +36,14 @@
   },
   "work": [{
     "company": "Orbcare Inc.",
-    "position": "Software R&D Intern\n\nR&D Consultant",
+    "position": "R&D Contractor\nSoftware R&D Intern",
     "website": "https://orbcare.com/",
     "startDate": "2019-05-01",
     "endDate": "Present",
     "location": "Toronto, ON",
     "summary": "Worked on a team that developed Orbcare's medical practice software using Ruby on Rails and Ember JS",
     "highlights": [
+      "Worked on a team that developed Orbcare's medical practice software using Ruby on Rails and Ember JS",
 	"Performed research and production development to integrate clinics' phone systems with Orbcare, reducing call times",
 	"Reduced developer setup time from a day to 20 minutes by dockerizing the application",
 	"Integrated other clinic management systems with Orbcare using OAuth and REST APIs"
@@ -48,6 +57,7 @@
     "endDate": "2017-11-18",
     "summary": "Spun off a contract solution for investment portfolio managers into a SAAS business",
     "highlights": [
+      "Spun off a contract solution for investment portfolio managers into a SAAS business",
       "Independently developed a complete minimum viable product using Django",
       "Created Postgres views to derive position data causing a 4x speedup over Python ",
       "Sold intellectual property and code to a customer bringing the software in-house "
@@ -60,6 +70,7 @@
     "endDate": "2019-08-31",
     "summary": "Lead a co-op team in development of a Java natural language bot for personal banking",
     "highlights": [
+      "Lead a co-op team in development of a Java natural language bot for personal banking",
       "Served as developer and Natural Language specialist for all co-op Android team ",
       "Developed prototype natural language search solution to compete with vendor proposals",
       "Collaborated in a Scrum team with story writing, sprint planning, and code review"
@@ -70,8 +81,9 @@
     "website": "https://www.intrinsyc.com/",
     "startDate":"2015-05-01",
     "endDate": "2015-07-30",
-    "summary": "Developed an Android app that made DragonBoard factory testing 4x faster",
+    "summary": "Developed a QA Android app that made factory testing 4x faster. Implemented a secure update utility for flashing Qualcomm devices.",
     "highlights": [
+      "Developed an Android app that made factory testing of DragonBoard devices 4x faster",
       "Compiled and flashed Android onto new DragonBoard development platforms",
       "Implemented a secure update utility in Java for flashing Qualcomm devices"
     ]
@@ -81,8 +93,9 @@
     "website": "https://sunnybrook.ca/research/content/?page=sri-groups-fus",
     "startDate":"2014-07-01",
     "endDate": "2014-08-31",
-    "summary": "Analyzed biomedical signals using MATLAB for an experimental brain imaging modality",
+    "summary": "Analyzed ultrasound signals for an experimental brain imaging modality. Sped up analysis of animal experiments by 10x with computer vision.",
     "highlights": [
+      "Analyzed biomedical signals using MATLAB for an experimental brain imaging modality",
       "Performed experiments with microbubble solutions and ultrasound transducers",
       "Sped up analysis of animal experiments by 10x by developing vision processing scripts"
     ]
@@ -92,8 +105,9 @@
     "website": "https://www.tremcoinc.com/",
     "startDate":"2014-02-01",
     "endDate": "2014-06-30",
-    "summary": "Developed regression models for manufacturing times to estimate costs of custom products",
+    "summary": "Developed spreadsheets for manufacturing time regressions and quality tracking. Implemented web interfaces for HVAC monitoring.",
     "highlights": [
+      "Developed regression models for manufacturing times to estimate costs of custom products",
       "Implemented web interfaces for systems control and monitoring with Niagara AX",
       "Created highly automated spreadsheets with VBA macros and GUIs for business use"
     ]

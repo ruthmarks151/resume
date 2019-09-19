@@ -8,9 +8,9 @@
     "website": "",
     "summary": "",
     "location": {
-      "address": "200 Bessborough Drive",
-      "postalCode": "M4G 3K1",
-      "city": "Toronto",
+      "address": "57 Mericourt Road",
+      "postalCode": "L8S 2N5",
+      "city": "Hamilton",
       "countryCode": "CA",
       "region": "Ontario",
       "regionCode": "ON"
@@ -31,6 +31,7 @@
     "location": "Toronto, ON",
     "summary": "Worked on a team that developed Orbcare's medical practice software using Ruby on Rails and Ember JS",
     "highlights": [
+      "Worked on a team that developed Orbcare's medical practice software using Ruby on Rails and Ember JS",
 	"Performed research and production development to integrate clinics' phone systems with Orbcare, reducing call times",
 	"Reduced developer setup time from a day to 20 minutes by dockerizing the application",
 	"Integrated other clinic management systems with Orbcare using OAuth and REST APIs"
@@ -44,6 +45,7 @@
     "endDate": "2017-11-18",
     "summary": "Spun off a contract solution for investment portfolio managers into a SAAS business",
     "highlights": [
+      "Spun off a contract solution for investment portfolio managers into a SAAS business",
       "Independently developed a complete minimum viable product using Django",
       "Created Postgres views to derive position data causing a 4x speedup over Python ",
       "Sold intellectual property and code to a customer bringing the software in-house "
@@ -56,6 +58,7 @@
     "endDate": "2019-08-31",
     "summary": "Lead a co-op team in development of a Java natural language bot for personal banking",
     "highlights": [
+      "Lead a co-op team in development of a Java natural language bot for personal banking",
       "Served as developer and Natural Language specialist for all co-op Android team ",
       "Developed prototype natural language search solution to compete with vendor proposals",
       "Collaborated in a Scrum team with story writing, sprint planning, and code review"
@@ -67,7 +70,11 @@
     "startDate":"2015-05-01",
     "endDate": "2015-07-30",
     "summary": "Developed a QA Android app that made factory testing 4x faster. Implemented a secure update utility for flashing Qualcomm devices.",
-    "highlights": []
+    "highlights": [
+      "Developed an Android app that made factory testing of DragonBoard devices 4x faster",
+      "Compiled and flashed Android onto new DragonBoard development platforms",
+      "Implemented a secure update utility in Java for flashing Qualcomm devices"
+    ]
   },{
     "company": "Sunnybrook Research Institute",
     "position": "Focused Ultrasound Research Student",
@@ -75,17 +82,12 @@
     "startDate":"2014-07-01",
     "endDate": "2014-08-31",
     "summary": "Analyzed ultrasound signals for an experimental brain imaging modality. Sped up analysis of animal experiments by 10x with computer vision.",
-    "highlights": []
-  },{
-    "company": "Tremco Inc",
-    "position": "Engineering Co-op",
-    "website": "https://www.tremcoinc.com/",
-    "startDate":"2014-02-01",
-    "endDate": "2014-06-30",
-    "summary": "Developed spreadsheets for manufacturing time regressions and quality tracking. Implemented web interfaces for HVAC monitoring.",
-    "highlights": []
+    "highlights": [
+      "Analyzed biomedical signals using MATLAB for an experimental brain imaging modality",
+      "Performed experiments with microbubble solutions and ultrasound transducers",
+      "Sped up analysis of animal experiments by 10x by developing vision processing scripts"
+    ]
   }
-
 ],
   "education": [{
     "institution": "McMaster University",
@@ -115,7 +117,7 @@
     "publisher": "Hack Duke 2014",
     "releaseDate": "2014-11-01",
     "website": "https://devpost.com/software/curatio-9fspf",
-    "summary": "Curation helps stroke survivors with weakness in one hand. Using the idea of mirror box therapy, a patient wears two gloves, one measures the postioning of the fingers, and the other mirrors it. Built using Arduino."
+    "summary": "Curatio helps stroke survivors with weakness in one hand. Using the idea of mirror box therapy, a patient wears two gloves, one measures the postioning of the fingers, and the other mirrors it. Built using Arduino."
   }
 ],
 "volunteer": []
