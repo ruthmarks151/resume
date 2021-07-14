@@ -8,19 +8,22 @@
     "website": "",
     "summary": "",
     "location": {
-      "address": "57 Mericourt Road",
+      "address": "57 Mericourt Road Unit 211",
       "postalCode": "L8S 2N5",
       "city": "Hamilton",
       "countryCode": "CA",
       "region": "Ontario",
       "regionCode": "ON"
     },
-    "profiles": [
-    {
-      "network": "Github",
-      "username": "ryanmarks",
-      "url": "https://github.com/ryanmarks"
-      }]
+    "toronto": {
+      "address": "200 Bessborough Drive",
+      "postalCode": "M4G 3K1",
+      "city": "Toronto",
+      "countryCode": "CA",
+      "region": "Ontario",
+      "regionCode": "ON"
+    },
+    "profiles": []
   },
   "work": [{
     "company": "Orbcare Inc.",
@@ -34,7 +37,7 @@
       "Worked on a team that developed Orbcare's medical practice software using Ruby on Rails and Ember JS",
 	"Performed research and production development to integrate clinics' phone systems with Orbcare, reducing call times",
 	"Reduced developer setup time from a day to 20 minutes by dockerizing the application",
-	"Integrated other clinic management systems with Orbcare using OAuth and REST APIs"
+	"Reverse engineered OAuth and REST APIs using packet analysis to integrate with another medical records system"
     ]
   },
   {
@@ -42,7 +45,7 @@
     "position": "Sole Proprietor",
     "website": "",
     "startDate":"2017-03-01",
-    "endDate": "2017-11-18",
+    "endDate": "2018-11-01",
     "summary": "Spun off a contract solution for investment portfolio managers into a SAAS business",
     "highlights": [
       "Spun off a contract solution for investment portfolio managers into a SAAS business",
@@ -54,9 +57,9 @@
     "company": "CIBC Live Labs",
     "position": "Innovation Engineer Co-op",
     "website": "https://www.cibc.com/ca/livelabs/index.html",
-    "startDate":"2019-05-01",
-    "endDate": "2019-08-31",
-    "summary": "Lead a co-op team in development of a Java natural language bot for personal banking",
+    "startDate":"2016-05-01",
+    "endDate": "2016-08-31",
+    "summary": "Collaborated in a Scrum team developing a reimagined Android mobile banking app. Lead development of a chatbot and a prototype natural language search solution to compete with vendor proposals",
     "highlights": [
       "Lead a co-op team in development of a Java natural language bot for personal banking",
       "Served as developer and Natural Language specialist for all co-op Android team ",
@@ -100,7 +103,14 @@
     ],
     "summary": "Expected completion: April 2020"
   }],
-  "publications": [{
+  "publications": [
+    {
+      "name": "Software Suppoort for Psychology Research",
+      "publisher": "Cognitive Science of Memory and Attention (Milliken Lab)",
+      "releaseDate": "Sep. 2019 - Present",
+      "website": "",
+      "summary": "Lead code reviews with experimental psychologists to identify errors and improve code quality of computer experiments. Automated processing of experiment audio saving 100's of researcher hours."
+    },{
     "name": "Anterior EEG Cross-Frequency Correlation in Preoperative Anxiety",
     "publisher": "J. Sriranjan, C. Chow,\nR. Marks, & L. Schmidt",
     "releaseDate": "2019-03-01",
@@ -112,13 +122,8 @@
     "releaseDate": "2015-02-01",
     "website": "https://devpost.com/software/project-julius-2br2v",
     "summary": "Project Julius protects people with photosensitive epilepsy from flashing content that could cause a seizure by detecting and blocking it in less than a second. Built using Python and OpenCV."
-  },{
-    "name": "Curatio - Post-Stroke Physical Therapy",
-    "publisher": "Hack Duke 2014",
-    "releaseDate": "2014-11-01",
-    "website": "https://devpost.com/software/curatio-9fspf",
-    "summary": "Curatio helps stroke survivors with weakness in one hand. Using the idea of mirror box therapy, a patient wears two gloves, one measures the postioning of the fingers, and the other mirrors it. Built using Arduino."
   }
 ],
+"softSkills": [],
 "volunteer": []
 }

@@ -8,9 +8,9 @@
     "website": "",
     "summary": "",
     "location": {
-      "address": "57 Mericourt Road",
-      "postalCode": "L8S 2N5",
-      "city": "Hamilton",
+      "address": "21 Grange Ave Unit 1",
+      "postalCode": "M5T 1C6",
+      "city": "Toronto",
       "countryCode": "CA",
       "region": "Ontario",
       "regionCode": "ON"
@@ -35,18 +35,18 @@
       }]
   },
   "work": [{
-    "company": "Orbcare Inc.",
+    "company": "Adracare Inc.",
     "position": "R&D Contractor\nSoftware R&D Intern",
-    "website": "https://orbcare.com/",
+    "website": "https://adracare.com/",
     "startDate": "2019-05-01",
-    "endDate": "Present",
+    "endDate": "2020-10-2019",
     "location": "Toronto, ON",
     "summary": "Worked on a team that developed Orbcare's medical practice software using Ruby on Rails and Ember JS",
     "highlights": [
       "Worked on a team that developed Orbcare's medical practice software using Ruby on Rails and Ember JS",
 	"Performed research and production development to integrate clinics' phone systems with Orbcare, reducing call times",
 	"Reduced developer setup time from a day to 20 minutes by dockerizing the application",
-	"Integrated other clinic management systems with Orbcare using OAuth and REST APIs"
+  "Reverse engineered OAuth and REST APIs using packet analysis to integrate with another medical records system"
     ]
   },
   {
@@ -54,7 +54,7 @@
     "position": "Sole Proprietor",
     "website": "",
     "startDate":"2017-03-01",
-    "endDate": "2017-11-18",
+    "endDate": "2018-11-01",
     "summary": "Spun off a contract solution for investment portfolio managers into a SAAS business",
     "highlights": [
       "Spun off a contract solution for investment portfolio managers into a SAAS business",
@@ -66,8 +66,8 @@
     "company": "CIBC Live Labs",
     "position": "Innovation Engineer Co-op",
     "website": "https://www.cibc.com/ca/livelabs/index.html",
-    "startDate":"2019-05-01",
-    "endDate": "2019-08-31",
+    "startDate":"2016-05-01",
+    "endDate": "2016-08-31",
     "summary": "Lead a co-op team in development of a Java natural language bot for personal banking",
     "highlights": [
       "Lead a co-op team in development of a Java natural language bot for personal banking",
@@ -126,7 +126,14 @@
     ],
     "summary": "Expected completion: April 2020"
   }],
-  "publications": [{
+  "publications": [
+    {
+      "name": "Software Suppoort for Psychology Research",
+      "publisher": "Cognitive Science of Memory and Attention (Milliken Lab)",
+      "releaseDate": "Sep. 2019 - Present",
+      "website": "",
+      "summary": "Lead code reviews with experimental psychologists to identify errors and improve code quality of computer experiments. Automated processing of experiment audio saving 100's of researcher hours."
+    },{
     "name": "Anterior EEG Cross-Frequency Correlation in Preoperative Anxiety",
     "publisher": "J. Sriranjan, C. Chow,\nR. Marks, & L. Schmidt",
     "releaseDate": "2019-03-01",
@@ -143,9 +150,10 @@
     "publisher": "Hack Duke 2014",
     "releaseDate": "2014-11-01",
     "website": "https://devpost.com/software/curatio-9fspf",
-    "summary": "Curation helps stroke survivors with weakness in one hand. Using the idea of mirror box therapy, a patient wears two gloves, one measures the postioning of the fingers, and the other mirrors it. Built using Arduino."
+    "summary": "Curatio helps stroke survivors with weakness in one hand. Using the idea of mirror box therapy, a patient wears two gloves, one measures the postioning of the fingers and the other helps the weak hand mirror it."
   }
 ],
+"softSkills": [],
 "volunteer": [{
     "organization": "PDT Society\nMcMaster Chapter",
     "position": "Vice President",

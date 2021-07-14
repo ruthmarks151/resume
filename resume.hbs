@@ -1,16 +1,21 @@
 <!--
 hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./helpers/monthFormat.js --data resume_2019-09-18.json resume.hbs
 -->
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
 <body class="markdown-body">
   <div style="border-style: hidden; width: 8.5in; height: 11in; padding: 0.125in 0.25in 0.125in 0.25in; margin: 0em;">
-    <div class="container" style="line-height: 1.1">
+    <div class="container" style="line-height: 1.05">
       {{#with basics}}
-        <div class="big_col">
+        <div class="big_col" style="margin-left: 0;">
           <h1 style="font-size: 4.5em;">
             {{name}}
           </h1>
         </div>
-        <div class="small_col" style="margin-bottom: 0; margin-top: auto; flex-basis: 45%;">
+        <div class="small_col" style="margin-bottom: auto; margin-top: auto; flex-basis: 45%;">
           <span style="width: 100%; float: right; text-align: right;">
             <span style="font-weight: 400; font-size: 14px;">
               {{#with location}}
@@ -59,7 +64,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
       margin-top: 0;
       margin-left: 4px;
       margin-right: 4px;
-      margin: auto;
+      margin-bottom: 0;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -76,6 +81,14 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
       margin: 0;
     }
     </style>
+    {{#if softSkills}}
+      {{#each softSkills}}
+        <div style="margin-top: -0.25em; margin-bottom: -0.25em">
+          <h3 style="display: inline;">{{name}}</h3>
+          {{summary}}
+        </div>
+      {{/each}}
+    {{/if}}
     <div class="container" style="height: 9.75in;">
       <div class="big_col">
         <div class="header-row">
@@ -158,8 +171,10 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
                 {{ name }}
               </a>
             </h3>
+	    {{#if publisher}}
             <br>
             <h4>{{breaklines publisher}}</h4>
+	    {{/if}}
             <br>
             <h5>{{monthFormat releaseDate}}</h5>
             <br>
@@ -209,6 +224,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
   border-bottom: 3px solid #24292e;
   display: inline-block;
   width: 100%;
+  line-height: 1.25;
 }
 .markdown-body .job-row {
   display: inline-block;
@@ -368,7 +384,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
   word-wrap: break-all
 }
 .markdown-body li+li {
-  margin-top: .25em
+  margin-top: 0.5em
 }
 .markdown-body code {
   padding: .2em .4em;
@@ -389,3 +405,4 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
   }
 }
 </style>
+</html>
