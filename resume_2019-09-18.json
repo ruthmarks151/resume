@@ -32,10 +32,10 @@
     "startDate": "2019-05-01",
     "endDate": "Present",
     "location": "Toronto, ON",
-    "summary": "Worked on a team that developed Orbcare's medical practice software using Ruby on Rails and Ember JS",
+    "summary": "Worked on a team that developed Adracare's medical practice software using Ruby on Rails and Ember JS",
     "highlights": [
-      "Worked on a team that developed Orbcare's medical practice software using Ruby on Rails and Ember JS",
-	"Performed research and production development to integrate clinics' phone systems with Orbcare, reducing call times",
+      "Worked on a team that developed Adracare's medical practice software using Ruby on Rails and Ember JS",
+	"Performed research and production development to integrate clinics' phone systems with Adracare, reducing call times",
 	"Reduced developer setup time from a day to 20 minutes by dockerizing the application",
 	"Reverse engineered OAuth and REST APIs using packet analysis to integrate with another medical records system"
     ]

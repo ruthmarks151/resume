@@ -1,0 +1,128 @@
+{
+  "basics": {
+    "name": "Ryan Marks",
+    "label": "Software Developer",
+    "picture": "",
+    "email": "ryanmarks151@gmail.com",
+    "phone": "(416) 678-0185",
+    "website": "",
+    "summary": "",
+    "Hamilton": {
+      "address": "57 Mericourt Road Unit 211",
+      "postalCode": "L8S 2N5",
+      "city": "Hamilton",
+      "countryCode": "CA",
+      "region": "Ontario",
+      "regionCode": "ON"
+    },
+    "location": {
+      "address": "200 Bessborough Drive",
+      "postalCode": "M4G 3K1",
+      "city": "Toronto",
+      "countryCode": "CA",
+      "region": "Ontario",
+      "regionCode": "ON"
+    },
+    "profiles": []
+  },
+  "work": [{
+    "company": "VendorPM",
+    "position": "Full Stack Development Contractor",
+    "website": "https://vendorpm.com/",
+    "startDate": "2019-11-27",
+    "endDate": "Present",
+    "location": "Toronto, ON",
+    "summary": "",
+    "highlights": [
+        "Delivered V1 of a Yelp-style platform for property managers to review their vendors",
+        "Developed pages using React functional components, hooks, and Apollo GraphQL",
+        "Created scalable GraphQL endpoints using Node.JS and a hosted MongoDB cluster",
+        "Organized development priorities instituting Kanban boards and bug tracking"
+    ]
+   },
+   {
+    "company": "Adracare",
+    "position": "R&D Contractor\nSoftware R&D Intern",
+    "website": "https://adracare.com/",
+    "startDate": "2019-05-01",
+    "endDate": "2019-10-06",
+    "location": "Toronto, ON",
+    "summary": "Worked on a team that developed Adracare's medical practice software using Ruby on Rails and Ember JS",
+    "highlights": [
+      "Developed features for Adracare's medical practice software using Ruby on Rails and Ember JS",
+	    "Integrated clinics' phone systems with Adracare so a patient's file is displayed whenever they call",
+	    "Reduced developer setup time from a day to 20 minutes by containerizing the app with Docker",
+      "Analyzed network traffic from another medical scheduling system to reverse engineer its APIs for use with Adracare"
+    ]
+  },
+  {
+    "company": "PortfolioLink",
+    "position": "Sole Proprietor",
+    "website": "",
+    "startDate":"2017-03-01",
+    "endDate": "2018-11-01",
+    "summary": "Spun off a contract solution for investment portfolio managers into a SaaS business",
+    "highlights": [
+      "Develoed a contract solution for investment portfolio managers, which spun off into a SaaS business",
+      "Independently developed a complete minimum viable product using Django",
+      "Eliminated a major bottleneck by calculating account values with Postgres, causing a 4x speedup over Python",
+      "Sold intellectual property and code to a customer bringing the software in-house"
+    ]
+  },{
+    "company": "CIBC Live Labs",
+    "position": "Innovation Engineer Co-op",
+    "website": "https://www.cibc.com/ca/livelabs/index.html",
+    "startDate":"2016-05-01",
+    "endDate": "2016-08-31",
+    "summary": "Collaborated in a Scrum team developing a reimagined Android mobile banking app. Lead development of a chatbot and a prototype natural language search solution to compete with vendor proposals",
+    "highlights": [
+      "Lead a co-op team in development of a Java chatbot for personal banking",
+      "Developed a natural language search solution to compete with vendor proposals"
+    ]
+  },{
+    "company": "Intrinsyc Technologies",
+    "position": "Software Engineering Co-op",
+    "website": "https://www.intrinsyc.com/",
+    "startDate":"2015-05-01",
+    "endDate": "2015-07-30",
+    "summary": "Developed a QA Android app that made factory testing 4x faster. Implemented a secure update utility for flashing Qualcomm devices.",
+    "highlights": [
+      "Developed an Android app to test single board computer hardware, reducing defects and speeding up factory testing by 4x",
+      "Implemented a Java utility for securely updating and flashing Qualcomm devices"
+    ]
+  }
+],
+  "education": [{
+    "institution": "McMaster University",
+    "area": "Bachelor of Engineering\nSoftware Engineering",
+    "studyType": "Bachelor",
+    "startDate": "2014-09-01",
+    "endDate": "Present",
+    "gpa": "3.1",
+    "courses": [
+    ],
+    "summary": "Expected completion: April 2020"
+  }],
+  "publications": [{
+    "name": "Wildfire Alarm System",
+    "publisher": "WildfireAlarm.org",
+    "releaseDate": "Sep. 2019 - Present",
+    "website": "https://wildfirealarm.org/",
+    "summary": "Wildfire Alarm is a web app and wireless network of sensors that can be deployed in an area at risk of wildfires to monitor the environment and notify personnel of possible fires. The software was built in a serverless microservices architecture and uses React, Google ML Kit, and  Cloud Functions"
+  },{
+      "name": "Software Support for Psychology Research",
+      "publisher": "McMaster Psychology, Neuroscience & Behaviour Department",
+      "releaseDate": "Sep. 2019 - Present",
+      "website": "",
+      "summary": "Lead code reviews with psychology researchers to identify errors and improve code quality of computer experiments. Automated scoring of experiment audio saving 100's of researcher hours."
+    },{
+    "name": "Anterior EEG Cross-Frequency Correlation in Preoperative Anxiety",
+    "publisher": "J. Sriranjan, C. Chow,\nR. Marks, & L. Schmidt",
+    "releaseDate": "2019-03-01",
+    "website": "",
+    "summary": "Developed signal processing algorithms to isolate EEG activity levels in pediatric surgery patients to examine the neurological underpinning of anxiety."
+  }
+],
+"softSkills": [],
+"volunteer": []
+}

@@ -15,14 +15,6 @@
       "region": "Ontario",
       "regionCode": "ON"
     },
-    "toronto": {
-      "address": "200 Bessborough Drive",
-      "postalCode": "M4G 3K1",
-      "city": "Toronto",
-      "countryCode": "CA",
-      "region": "Ontario",
-      "regionCode": "ON"
-    },
     "profiles": [{
       "network": "Linkedin",
       "username": "Ryan Marks",
@@ -34,17 +26,33 @@
       "url": "https://github.com/ryanmarks"
       }]
   },
-  "work": [{
+  "work": [
+    {
+    "company": "Akira (TELUS Health Virtual Care)",
+    "position": "Software Developer",
+    "website": "https://akira.md/",
+    "startDate": "2020-03-31",
+    "endDate": "Present",
+    "location": "Toronto, ON",
+    "summary": "Worked on Akira's patient experience team to deliver virtual healthcare to eight-hundred thousand Canadians using React, Node, and Ruby",
+    "highlights": [
+      "Worked on Akira's patient experience team to deliver virtual healthcare to eight-hundred thousand Canadians using React, Node, and Ruby",
+      "Developed browser based image processing for physician signatures to be applied to prescriptions and sick notes",
+      "Ideated a proof of concept for better therapist discovery that set product direction for the next year",
+      "Took suggestions from medic operations channel"
+    ]
+    },
+    {
     "company": "Adracare Inc.",
-    "position": "R&D Contractor\nSoftware R&D Intern",
+    "position": "R&D Contractor,\nSoftware R&D Intern",
     "website": "https://adracare.com/",
     "startDate": "2019-05-01",
-    "endDate": "2020-10-2019",
+    "endDate": "2019-10-01",
     "location": "Toronto, ON",
-    "summary": "Worked on a team that developed Orbcare's medical practice software using Ruby on Rails and Ember JS",
+    "summary": "Worked on a team that developed Adracare's medical practice software using Ruby on Rails and Ember JS",
     "highlights": [
-      "Worked on a team that developed Orbcare's medical practice software using Ruby on Rails and Ember JS",
-	"Performed research and production development to integrate clinics' phone systems with Orbcare, reducing call times",
+      "Worked on a team that developed Adracare's medical practice software using Ruby on Rails and Ember JS",
+	"Performed research and production development to integrate clinics' phone systems with Adracare, reducing call times",
 	"Reduced developer setup time from a day to 20 minutes by dockerizing the application",
   "Reverse engineered OAuth and REST APIs using packet analysis to integrate with another medical records system"
     ]
@@ -55,23 +63,25 @@
     "website": "",
     "startDate":"2017-03-01",
     "endDate": "2018-11-01",
+    "location": "Hamilton, ON",
     "summary": "Spun off a contract solution for investment portfolio managers into a SAAS business",
     "highlights": [
       "Spun off a contract solution for investment portfolio managers into a SAAS business",
       "Independently developed a complete minimum viable product using Django",
-      "Created Postgres views to derive position data causing a 4x speedup over Python ",
+      "Created Postgres views to derive position data causing a 4x speedup over Python",
       "Sold intellectual property and code to a customer bringing the software in-house "
     ]
   },{
     "company": "CIBC Live Labs",
     "position": "Innovation Engineer Co-op",
-    "website": "https://www.cibc.com/ca/livelabs/index.html",
+    "website": "https://www.cibc.com/en/about-cibc/careers/innovation-history.html",
     "startDate":"2016-05-01",
     "endDate": "2016-08-31",
+    "location": "Toronto, ON",
     "summary": "Lead a co-op team in development of a Java natural language bot for personal banking",
     "highlights": [
       "Lead a co-op team in development of a Java natural language bot for personal banking",
-      "Served as developer and Natural Language specialist for all co-op Android team ",
+      "Served as developer and Natural Language specialist for all co-op Android team",
       "Developed prototype natural language search solution to compete with vendor proposals",
       "Collaborated in a Scrum team with story writing, sprint planning, and code review"
     ]
@@ -81,6 +91,7 @@
     "website": "https://www.intrinsyc.com/",
     "startDate":"2015-05-01",
     "endDate": "2015-07-30",
+    "location": "Vancouver, BC",
     "summary": "Developed a QA Android app that made factory testing 4x faster. Implemented a secure update utility for flashing Qualcomm devices.",
     "highlights": [
       "Developed an Android app that made factory testing of DragonBoard devices 4x faster",
@@ -120,17 +131,22 @@
     "area": "Bachelor of Engineering\nSoftware Engineering",
     "studyType": "Bachelor",
     "startDate": "2014-09-01",
-    "endDate": "Present",
+    "endDate": "2020-04-31",
     "gpa": "3.1",
     "courses": [
     ],
-    "summary": "Expected completion: April 2020"
+    "summary": ""
   }],
   "publications": [
     {
+      "name": "Wildfire Alarm System",
+      "releaseDate": "Sep. 2019 - Apr. 2020",
+      "website": "",
+      "summary": "Wildfire Alarm is a web app and wireless network of sensors that can be deployed in an area at risk of wildfires to monitor the environment and notify personnel of possible fires. The software was built in a serverless microservices architecture and uses React, Google ML Kit, and  Cloud Functions"
+    },{
       "name": "Software Suppoort for Psychology Research",
       "publisher": "Cognitive Science of Memory and Attention (Milliken Lab)",
-      "releaseDate": "Sep. 2019 - Present",
+      "releaseDate": "Sep. 2019 - April 2020",
       "website": "",
       "summary": "Lead code reviews with experimental psychologists to identify errors and improve code quality of computer experiments. Automated processing of experiment audio saving 100's of researcher hours."
     },{

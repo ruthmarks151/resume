@@ -259,144 +259,158 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
     </style>
   </head>
   <body class="Page">
-    {{#with basics}}
       <header class="Header">
         <div class="Header__left">
           <h1 class="Header__name">
-            {{name}}
+            Ryan Marks
           </h1>
         </div>
         <div class="Header__contact-info">
-          {{#with location}}
-            <span>{{address}}, {{city}}, {{regionCode}}, {{postalCode}}</span>
-          {{/with}}
-          <span>{{email}}</span>
-          <span>{{phone}}</span>
-          {{#each profiles}}
-            <a href="{{url}}">
-              {{#ifEquals network "Github"}}
-                <svg class="icon" viewBox="0 0 24 24">
-                  <path
-                    fill="#000000"
-                    d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"
-                  ></path>
-                </svg>
-              {{/ifEquals}}
-              {{#ifEquals network "Linkedin"}}
-                <svg
-                  class="icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                ><path
-                    d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z"
-                  ></path></svg>
-              {{/ifEquals}}
-              <span>{{username}}</span>
-            </a>
-          {{/each}}
+            <span>200 Bessborough Drive, Toronto, ON, M4G 3K1</span>
+          <span>ryanmarks151@gmail.com</span>
+          <span>(416) 678-0185</span>
         </div>
       </header>
-      {{#if summary}}
-        <div class="Summary">{{summary}}</div>
-      {{/if}}
-    {{/with}}
 
-    {{#if softSkills}}
-      {{#each softSkills}}
-        <div style="margin-top: -0.25em; margin-bottom: -0.25em">
-          <h3 style="display: inline;">{{name}}</h3>
-          {{summary}}
-        </div>
-      {{/each}}
-    {{/if}}
 
     <div class="Body">
       <div class="WorkExperience">
         <h2>Work Experience</h2>
-        {{#each work}}
-          {{#if highlights}}
             <div class="JobRow JobRow--large">
               <div class="JobRow__summary">
-                <h3><a href="{{website}}">{{breaklines company}}</a></h3>
-                <h4>{{breaklines position}}</h4>
-                <h5>{{monthFormat startDate}} - {{monthFormat endDate}}</h5>
-                <h5>{{location}}</h5>
+                <h3><a href="https://vendorpm.com/">VendorPM</a></h3>
+                <h4>Full Stack Development Contractor</h4>
+                <h5>Nov. 2019 - Present</h5>
+                <h5>Toronto, ON</h5>
               </div>
               <div class="JobRow__bullets">
                 <ul>
-                  {{#each highlights}}
-                    <li>{{this}}</li>
-                  {{/each}}
+                    <li>Delivered V1 of a Yelp-style platform for property managers to review their vendors</li>
+                    <li>Developed pages using React functional components, hooks, and Apollo GraphQL</li>
+                    <li>Created scalable GraphQL endpoints using Node.JS and a hosted MongoDB cluster</li>
+                    <li>Organized development priorities instituting Kanban boards and bug tracking</li>
                 </ul>
               </div>
             </div>
-          {{else}}
-            <div class="JobRow JobRow--small">
-              <div class="JobRow__summary">
-                <h3><a href="{{website}}">{{company}}</a></h3>
-                <h4>{{position}}</h4>
-                <h5>{{monthFormat startDate}} - {{monthFormat endDate}}</h5>
-                <h5>{{location}}</h5>
-              </div>
-              <p>{{summary}}</p>
-            </div>
-          {{/if}}
           <hr />
-        {{/each}}
+            <div class="JobRow JobRow--large">
+              <div class="JobRow__summary">
+                <h3><a href="https://adracare.com/">Adracare</a></h3>
+                <h4>R&amp;D Contractor<br>Software R&amp;D Intern</h4>
+                <h5>May 2019 - Oct. 2019</h5>
+                <h5>Toronto, ON</h5>
+              </div>
+              <div class="JobRow__bullets">
+                <ul>
+                    <li>Developed features for Adracare&#x27;s medical practice software using Ruby on Rails and Ember JS</li>
+                    <li>Integrated clinics&#x27; phone systems with Adracare so a patient&#x27;s file is displayed whenever they call</li>
+                    <li>Reduced developer setup time from a day to 20 minutes by containerizing the app with Docker</li>
+                    <li>Analyzed network traffic from another medical scheduling system to reverse engineer its APIs for use with Adracare</li>
+                </ul>
+              </div>
+            </div>
+          <hr />
+            <div class="JobRow JobRow--large">
+              <div class="JobRow__summary">
+                <h3><a href="">PortfolioLink</a></h3>
+                <h4>Sole Proprietor</h4>
+                <h5>Mar. 2017 - Nov. 2018</h5>
+                <h5></h5>
+              </div>
+              <div class="JobRow__bullets">
+                <ul>
+                    <li>Develoed a contract solution for investment portfolio managers, which spun off into a SaaS business</li>
+                    <li>Independently developed a complete minimum viable product using Django</li>
+                    <li>Eliminated a major bottleneck by calculating account values with Postgres, causing a 4x speedup over Python</li>
+                    <li>Sold intellectual property and code to a customer bringing the software in-house</li>
+                </ul>
+              </div>
+            </div>
+          <hr />
+            <div class="JobRow JobRow--large">
+              <div class="JobRow__summary">
+                <h3><a href="https://www.cibc.com/ca/livelabs/index.html">CIBC Live Labs</a></h3>
+                <h4>Innovation Engineer Co-op</h4>
+                <h5>May 2016 - Aug. 2016</h5>
+                <h5></h5>
+              </div>
+              <div class="JobRow__bullets">
+                <ul>
+                    <li>Lead a co-op team in development of a Java chatbot for personal banking</li>
+                    <li>Developed a natural language search solution to compete with vendor proposals</li>
+                </ul>
+              </div>
+            </div>
+          <hr />
+            <div class="JobRow JobRow--large">
+              <div class="JobRow__summary">
+                <h3><a href="https://www.intrinsyc.com/">Intrinsyc Technologies</a></h3>
+                <h4>Software Engineering Co-op</h4>
+                <h5>May 2015 - Jul. 2015</h5>
+                <h5></h5>
+              </div>
+              <div class="JobRow__bullets">
+                <ul>
+                    <li>Developed an Android app to test single board computer hardware, reducing defects and speeding up factory testing by 4x</li>
+                    <li>Implemented a Java utility for securely updating and flashing Qualcomm devices</li>
+                </ul>
+              </div>
+            </div>
+          <hr />
       </div>
       <div class="Sidebar">
         <h2>Education</h2>
-        {{#each education}}
           <div class="SidebarItem">
-            <h3>{{institution}}</h3>
+            <h3>McMaster University</h3>
             <h4>
-              {{breaklines area}}
+              Bachelor of Engineering<br>Software Engineering
             </h4>
-            <h5>{{monthFormat startDate}} - {{monthFormat endDate}}</h5>
+            <h5>Sep. 2014 - Present</h5>
             <p style="margin-top: 4px">
-              <em>{{gpa}}/4.0 Equivalent GPA</em><br>
-              {{summary}}
+              <em>3.1/4.0 Equivalent GPA</em><br>
+              Expected completion: April 2020
             </p>
           </div>
-          {{#unless @last}}
-            <hr />
-          {{/unless}}
-        {{/each}}
         <h2>Projects</h2>
-        {{#each publications}}
           <div class="SidebarItem">
             <h3>
-              <a href="{{website}}">
-                {{name}}
+              <a href="https://wildfirealarm.org/">
+                Wildfire Alarm System
               </a>
             </h3>
-            {{#if publisher}}
-              <h4>{{breaklines publisher}}</h4>
-            {{/if}}
-            <h5>{{monthFormat releaseDate}}</h5>
+              <h4>WildfireAlarm.org</h4>
+            <h5>Sep. 2019 - Present</h5>
             <p style="margin-top: 4px">
-              {{summary}}
+              Wildfire Alarm is a web app and wireless network of sensors that can be deployed in an area at risk of wildfires to monitor the environment and notify personnel of possible fires. The software was built in a serverless microservices architecture and uses React, Google ML Kit, and  Cloud Functions
             </p>
           </div>
           <hr />
-        {{/each}}
-        {{#if volunteer}}
-          <h1>Volunteering</h1>
-        {{/if}}
-        {{#each volunteer}}
           <div class="SidebarItem">
-            <h3>{{position}}</h3>
-            <h4>
-              {{breaklines organization}}
-            </h4>
-            <h5>{{monthFormat startDate}} - {{monthFormat endDate}}</h5>
+            <h3>
+              <a href="">
+                Software Support for Psychology Research
+              </a>
+            </h3>
+              <h4>McMaster Psychology, Neuroscience &amp; Behaviour Department</h4>
+            <h5>Sep. 2019 - Present</h5>
             <p style="margin-top: 4px">
-              {{summary}}
+              Lead code reviews with psychology researchers to identify errors and improve code quality of computer experiments. Automated scoring of experiment audio saving 100&#x27;s of researcher hours.
             </p>
           </div>
-        {{/each}}
+          <hr />
+          <div class="SidebarItem">
+            <h3>
+              <a href="">
+                Anterior EEG Cross-Frequency Correlation in Preoperative Anxiety
+              </a>
+            </h3>
+              <h4>J. Sriranjan, C. Chow,<br>R. Marks, &amp; L. Schmidt</h4>
+            <h5>Mar. 2019</h5>
+            <p style="margin-top: 4px">
+              Developed signal processing algorithms to isolate EEG activity levels in pediatric surgery patients to examine the neurological underpinning of anxiety.
+            </p>
+          </div>
+          <hr />
       </div>
     </div>
   </body>

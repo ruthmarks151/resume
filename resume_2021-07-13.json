@@ -1,0 +1,146 @@
+{
+  "basics": {
+    "name": "Ryan Marks",
+    "label": "Software Developer",
+    "picture": "",
+    "email": "ryanmarks151@gmail.com",
+    "phone": "(416) 678-0185",
+    "website": "",
+    "summary": "Full stack developer with two years of React and Ruby experience in health-tech",
+    "location": {
+      "address": "21 Grange Ave",
+      "postalCode": "M5T 1C6",
+      "city": "Toronto",
+      "countryCode": "CA",
+      "region": "Ontario",
+      "regionCode": "ON"
+    },
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "ryanmarks",
+        "url": "https://github.com/ryanmarks"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "TELUS Health\nVirtual Care\n(Formerly Akira)",
+      "position": "Software Developer",
+      "website": "https://akira.md/",
+      "startDate": "2020-03-31",
+      "endDate": "Present",
+      "location": "Toronto, ON",
+      "summary": "Worked on Akira's patient experience team to deliver virtual healthcare to eight-hundred thousand Canadians using React, Node, and Ruby",
+      "highlights": [
+        "Developed major features with React and Ruby, using Kotlin/Swift to integrate web and patient apps",
+        "Lead rapid design sprints to design and develop digital vaccine booklet projects and health provider search",
+        "Created browser based image processing tools used to extract 100's of new clinician's signatures",
+        "Monitored #medic-operations Slack channel to ensure success of new features and help troubleshoot",
+        "Collaborated with product teams to arrive at feature scopes that maximize return on developer effort",
+        "Initiated new meetings to prioritize open pull requests and to run pre/post-mortems on large launches"
+      ]
+    },
+    {
+      "company": "Interactive Nursing Education",
+      "position": "Software Contractor",
+      "website": "",
+      "startDate": "2021-05-01",
+      "endDate": "Present",
+      "location": "Toronto, ON",
+      "summary": "",
+      "highlights": [
+        "Assisted on development of a platform of interactive educational modules for 50,000 nursing students",
+        "Converted an AngularJS proof of concept to a modular React app supporting many educational modules",
+        "Planned and executed a devops strategy to deliver the app and video assets reliably and cost efficiently"
+      ]
+    },
+    {
+      "company": "Adracare Inc.",
+      "position": "R&D Contractor,\nSoftware R&D Intern",
+      "website": "https://adracare.com/",
+      "startDate": "2019-05-01",
+      "endDate": "2019-10-01",
+      "location": "Toronto, ON",
+      "summary": "Worked on a team that developed Adracare's medical practice software using Ruby on Rails and Ember JS",
+      "highlights": [
+        "Developed radiology and medical practice management software using Ruby on Rails and Ember JS",
+        "Reverse engineered OAuth and REST APIs using packet analysis to integrate with another medical records system",
+        "Integrated clinic phone systems with Adracare, reducing call times and improving patient experience",
+        "Reduced developer setup time from a day to 20 minutes by dockerizing the application"
+      ]
+    },
+    {
+      "company": "PortfolioLink",
+      "position": "Sole Proprietor",
+      "website": "",
+      "startDate": "2017-03-01",
+      "endDate": "2018-11-01",
+      "location": "Hamilton, ON",
+      "summary": "Built and sold bespoke analytics software for investment portfolio managers",
+      "highlights": []
+    },
+    {
+      "company": "CIBC Live Labs",
+      "position": "Innovation Engineer Co-op",
+      "location": "Toronto, ON",
+      "website": "https://www.cibc.com/en/about-cibc/careers/innovation-history.html",
+      "startDate": "2016-05-01",
+      "endDate": "2016-08-31",
+      "highlights": []
+    },
+    {
+      "company": "Intrinsyc Technologies",
+      "position": "Software Engineering Co-op",
+      "location": "Vancouver, BC",
+      "website": "https://www.intrinsyc.com/",
+      "startDate": "2015-05-01",
+      "endDate": "2015-07-30",
+      "highlights": []
+    },
+    {
+      "company": "Sunnybrook Research Institute",
+      "position": "Focused Ultrasound Research Student",
+      "website": "https://sunnybrook.ca/research/content/?page=sri-groups-fus",
+      "startDate": "2014-07-01",
+      "endDate": "2014-08-31",
+      "location": "Toronto, ON",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "McMaster University",
+      "area": "Bachelor of Engineering\nSoftware Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2014-09-01",
+      "endDate": "2020-04-31",
+      "gpa": "3.1",
+      "courses": [],
+      "summary": "Courses in system design, software requirements, and testing"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Gravimetric Dosing Espresso Machine",
+      "releaseDate": "September 2020 - January 2021",
+      "website": "",
+      "summary": "Augmented a second hand espresso machine with new controls electronics enabling remote control and precise weight based dispensing of espresso. Built using Typescript, Raspberry Pi, and a Breville"
+    },
+    {
+      "name": "Wildfire Alarm System",
+      "releaseDate": "Sep. 2019 - Apr. 2020",
+      "website": "",
+      "summary": "Wildfire Alarm is a web app and wireless network of sensors to monitor for wildfires. The software was built in a serverless microservices architecture and uses Google Cloud Functions, ML Kit, and  React"
+    },
+    {
+      "name": "Software Suppoort for Psychology Research",
+      "publisher": "Cognitive Science of Memory and Attention (Milliken Lab)",
+      "releaseDate": "Sep. 2019 - April 2020",
+      "website": "",
+      "summary": "Lead code reviews with experimental psychologists to identify errors and improve code quality of computer experiments. Automated processing of experiment audio saving 100's of researcher hours."
+    }
+  ],
+  "softSkills": [],
+  "volunteer": []
+}

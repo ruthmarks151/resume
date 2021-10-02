@@ -1,466 +1,420 @@
 <!--
 hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./helpers/monthFormat.js --data resume_2019-09-18.json resume.hbs
 -->
-<!DOCTYPE html>
-<html>
-<head>
-</head>
 
-<body class="markdown-body">
-  <div style="border-style: hidden; width: 8.5in; height: 11in; padding: 0.125in 0.25in 0.125in 0.25in; margin: 0em;">
-    <div class="container" style="line-height: 1.05">
-        <div class="big_col" style="margin-left: 0;">
-          <h1 style="font-size: 4.5em;">
+<html>
+  <head>
+    <style>
+      .Page {
+
+        --space-1: 2px;
+        --space-2: 4px;
+        --space-3: 6px;
+        --space-4: 8px;
+        --space-5: 12px;
+        --space-6: 16px;
+        --space-7: 20px;
+        --space-8: 24px;
+        --space-9: 28px;
+        --space-10: 32px;
+        --space-11: 40px;
+        --space-12: 48px;
+
+        width: 8.5in;
+        height: 11in;
+
+        padding: var(--space-8);
+        margin: 0em;
+
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        line-height: 1.1;
+        font-size: 16px;
+        word-wrap: break-word;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-5);
+      }
+
+      @media only screen {
+        .Page {
+          border-style: solid;
+        }
+      }
+
+      @media only print {
+        .Page {
+          padding-top: 0.375in;
+        }
+      }
+
+      .Page h1,
+      .Page h2,
+      .Page h3,
+      .Page h4,
+      .Page h5,
+      .Page h6,
+      .Page p,
+      .Page span,
+      .Page ul,
+      .Page li,
+      .Page a,
+      .Page div {
+        font-family: 'Helvetica', 'Arial', sans-serif; 
+        color: #444;
+        margin: 0;
+        text-decoration: none;
+      }
+
+      .Page h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        border-bottom: 3px solid #24292e;
+        margin-bottom: var(--space-2)
+      }
+
+      .Page h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: var(--space-2);
+      }
+
+      .Page h4 {
+        font-weight: 600;
+        margin-bottom: var(--space-2);
+      }
+
+      .Page h5 {
+        font-weight: 500;
+        margin-bottom: var(--space-1);
+      }
+
+      .Page ul {
+        padding: 0 0 0 var(--space-4);
+      }
+
+      .Page li {
+        margin: var(--space-2) 0;
+      }
+
+      .Page a {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+
+      .Page h3 a {
+        font-size: inherit;
+        line-height: 1.1;
+      }
+
+      .Page p {
+        margin-bottom: var(--space-2);
+      }
+
+      .Page p,
+      .Page span,
+      .Page li,
+      .Page a {
+        font-size: 0.9375rem;
+        line-height: 1.25;
+      }
+
+      .Header {
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        line-height: 1.05
+      }
+
+      .Header .Header__left {
+        width: auto;
+        flex-grow: 1;
+        margin: auto;
+      }
+
+      .Header .Header__name {
+        font-size: 5rem;
+      }
+
+      .Header .Header__contact-info {
+        flex-grow: 0;
+        margin: 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        flex-direction: column;
+        text-align: right;
+        font-weight: 400;
+        font-size: 0.75rem;
+      }
+
+      .Header .Header__contact-info > * {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: baseline;
+      }
+
+      .Header .Header__contact-info .icon {
+        width: var(--space-6);
+        height: var(--space-6);
+        margin: auto;
+      }
+
+      .Header .Header__contact-info .icon + span {
+        margin-left: var(--space-1)
+      }
+
+      div.Summary {
+        text-align: left;
+        font-weight: 400;
+        font-size: 1.25rem;
+        /* margin: 0 auto; */
+        /* text-align: justify; */
+        /* border: 1px solid grey; */
+        /* padding: var(--space-3); */
+      }
+
+      .Body {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: var(--space-10);
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+
+      .Body hr {
+        border-top: 1px solid #24292e;
+        width: 100%;
+        margin: 0;
+      }
+
+      .Body>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .WorkExperience {
+        flex-grow: 1;
+        width: 5.5in;
+      }
+
+      .JobRow {
+        display: flex;
+      }
+
+      .JobRow--large {
+        flex-direction: row;
+        gap: var(--space-6);
+      }
+
+      .JobRow--large .JobRow__summary {
+        flex-grow: 0;
+        display: flex;
+        width: 10rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+      }
+
+      .JobRow .JobRow__bullets {
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+
+      .JobRow--small {
+        flex-direction: column;
+        gap: var(--space-2);
+      }
+
+      .JobRow--small .JobRow__summary {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 60px;
+      }
+
+      .JobRow--small .JobRow__summary h5 {
+        align-self: flex-end;
+      }
+
+      .Sidebar {
+        flex-grow: 0;
+        flex-basis: 14rem;
+      }
+
+      .SidebarItem {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body class="Page">
+      <header class="Header">
+        <div class="Header__left">
+          <h1 class="Header__name">
             Ryan Marks
           </h1>
         </div>
-        <div class="small_col" style="margin-bottom: auto; margin-top: auto; flex-basis: 45%;">
-          <span style="width: 100%; float: right; text-align: right;">
-            <span style="font-weight: 400; font-size: 14px;">
-                57 Mericourt Road Unit 211, Hamilton, ON, L8S 2N5<br>
-              ryanmarks151@gmail.com <br>
-              (416) 678-0185 <br>
-            </span>
-          </span>
+        <div class="Header__contact-info">
+            <span>57 Mericourt Road Unit 211, Hamilton, ON, L8S 2N5</span>
+          <span>ryanmarks151@gmail.com</span>
+          <span>(416) 678-0185</span>
         </div>
+      </header>
+
+
+    <div class="Body">
+      <div class="WorkExperience">
+        <h2>Work Experience</h2>
+            <div class="JobRow JobRow--large">
+              <div class="JobRow__summary">
+                <h3><a href="https://orbcare.com/">Orbcare Inc.</a></h3>
+                <h4>R&amp;D Contractor<br>Software R&amp;D Intern</h4>
+                <h5>May 2019 - Present</h5>
+                <h5>Toronto, ON</h5>
+              </div>
+              <div class="JobRow__bullets">
+                <ul>
+                    <li>Worked on a team that developed Adracare&#x27;s medical practice software using Ruby on Rails and Ember JS</li>
+                    <li>Performed research and production development to integrate clinics&#x27; phone systems with Adracare, reducing call times</li>
+                    <li>Reduced developer setup time from a day to 20 minutes by dockerizing the application</li>
+                    <li>Reverse engineered OAuth and REST APIs using packet analysis to integrate with another medical records system</li>
+                </ul>
+              </div>
+            </div>
+          <hr />
+            <div class="JobRow JobRow--large">
+              <div class="JobRow__summary">
+                <h3><a href="">PortfolioLink</a></h3>
+                <h4>Sole Proprietor</h4>
+                <h5>Mar. 2017 - Nov. 2018</h5>
+                <h5></h5>
+              </div>
+              <div class="JobRow__bullets">
+                <ul>
+                    <li>Spun off a contract solution for investment portfolio managers into a SAAS business</li>
+                    <li>Independently developed a complete minimum viable product using Django</li>
+                    <li>Created Postgres views to derive position data causing a 4x speedup over Python </li>
+                    <li>Sold intellectual property and code to a customer bringing the software in-house </li>
+                </ul>
+              </div>
+            </div>
+          <hr />
+            <div class="JobRow JobRow--large">
+              <div class="JobRow__summary">
+                <h3><a href="https://www.cibc.com/ca/livelabs/index.html">CIBC Live Labs</a></h3>
+                <h4>Innovation Engineer Co-op</h4>
+                <h5>May 2016 - Aug. 2016</h5>
+                <h5></h5>
+              </div>
+              <div class="JobRow__bullets">
+                <ul>
+                    <li>Lead a co-op team in development of a Java natural language bot for personal banking</li>
+                    <li>Served as developer and Natural Language specialist for all co-op Android team </li>
+                    <li>Developed prototype natural language search solution to compete with vendor proposals</li>
+                    <li>Collaborated in a Scrum team with story writing, sprint planning, and code review</li>
+                </ul>
+              </div>
+            </div>
+          <hr />
+            <div class="JobRow JobRow--large">
+              <div class="JobRow__summary">
+                <h3><a href="https://www.intrinsyc.com/">Intrinsyc Technologies</a></h3>
+                <h4>Software Engineering Co-op</h4>
+                <h5>May 2015 - Jul. 2015</h5>
+                <h5></h5>
+              </div>
+              <div class="JobRow__bullets">
+                <ul>
+                    <li>Developed an Android app that made factory testing of DragonBoard devices 4x faster</li>
+                    <li>Compiled and flashed Android onto new DragonBoard development platforms</li>
+                    <li>Implemented a secure update utility in Java for flashing Qualcomm devices</li>
+                </ul>
+              </div>
+            </div>
+          <hr />
+            <div class="JobRow JobRow--large">
+              <div class="JobRow__summary">
+                <h3><a href="https://sunnybrook.ca/research/content/?page&#x3D;sri-groups-fus">Sunnybrook Research Institute</a></h3>
+                <h4>Focused Ultrasound Research Student</h4>
+                <h5>Jul. 2014 - Aug. 2014</h5>
+                <h5></h5>
+              </div>
+              <div class="JobRow__bullets">
+                <ul>
+                    <li>Analyzed biomedical signals using MATLAB for an experimental brain imaging modality</li>
+                    <li>Performed experiments with microbubble solutions and ultrasound transducers</li>
+                    <li>Sped up analysis of animal experiments by 10x by developing vision processing scripts</li>
+                </ul>
+              </div>
+            </div>
+          <hr />
       </div>
-    <style>
-    .container {
-      display: flex;
-      width: 100%;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      align-items: stretch;
-    }
-    .big_col{
-      flex-grow: 1;
-      flex-basis: 50%;
-    }
-    .spacer_col{
-      flex-grow: 0;
-      flex-basis: 3%;
-    }
-    .small_col{
-      flex-grow: 0;
-      flex-basis: 32%;
-    }
-    .big_col, .small_col {
-      margin-top: 0;
-      margin-left: 4px;
-      margin-right: 4px;
-      margin-bottom: 0;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-    .underlined {
-      border-bottom: 1px solid #24292e;
-    }
-    hr {
-      border-top: 1px solid #24292e;
-      width: 100%;
-      margin: 0;
-    }
-    </style>
-    <div class="container" style="height: 9.75in;">
-      <div class="big_col">
-        <div class="header-row">
-          <h1>Work Experience</h1>
-        </div>
-            <div class="job-row">
-              <table>
-                <tr>
-                  <td class="details-col">
-                    <h3><a href="https://orbcare.com/">Orbcare Inc.</a></h3>
-                    <br>
-                    <h4>R&amp;D Contractor
-Software R&amp;D Intern</h4>
-                    <br>
-                    <h5>May 2019 - Present</h5>
-                    <br>
-                    <h5>Toronto, ON</h5>
-                  </td>
-                  <td>
-                    <ul>
-                      <li>Worked on a team that developed Orbcare&#x27;s medical practice software using Ruby on Rails and Ember JS</li>
-                      <li>Performed research and production development to integrate clinics&#x27; phone systems with Orbcare, reducing call times</li>
-                      <li>Reduced developer setup time from a day to 20 minutes by dockerizing the application</li>
-                      <li>Reverse engineered OAuth and REST APIs using packet analysis to integrate with another medical records system</li>
-                    </ul>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          <hr>
-            <div class="job-row">
-              <table>
-                <tr>
-                  <td class="details-col">
-                    <h3><a href="">PortfolioLink</a></h3>
-                    <br>
-                    <h4>Sole Proprietor</h4>
-                    <br>
-                    <h5>Mar. 2017 - Nov. 2018</h5>
-                    <br>
-                    <h5></h5>
-                  </td>
-                  <td>
-                    <ul>
-                      <li>Spun off a contract solution for investment portfolio managers into a SAAS business</li>
-                      <li>Independently developed a complete minimum viable product using Django</li>
-                      <li>Created Postgres views to derive position data causing a 4x speedup over Python </li>
-                      <li>Sold intellectual property and code to a customer bringing the software in-house </li>
-                    </ul>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          <hr>
-            <div class="job-row">
-              <table>
-                <tr>
-                  <td class="details-col">
-                    <h3><a href="https://www.cibc.com/ca/livelabs/index.html">CIBC Live Labs</a></h3>
-                    <br>
-                    <h4>Innovation Engineer Co-op</h4>
-                    <br>
-                    <h5>May 2016 - Aug. 2016</h5>
-                    <br>
-                    <h5></h5>
-                  </td>
-                  <td>
-                    <ul>
-                      <li>Lead a co-op team in development of a Java natural language bot for personal banking</li>
-                      <li>Served as developer and Natural Language specialist for all co-op Android team </li>
-                      <li>Developed prototype natural language search solution to compete with vendor proposals</li>
-                      <li>Collaborated in a Scrum team with story writing, sprint planning, and code review</li>
-                    </ul>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          <hr>
-            <div class="job-row">
-              <table>
-                <tr>
-                  <td class="details-col">
-                    <h3><a href="https://www.intrinsyc.com/">Intrinsyc Technologies</a></h3>
-                    <br>
-                    <h4>Software Engineering Co-op</h4>
-                    <br>
-                    <h5>May 2015 - Jul. 2015</h5>
-                    <br>
-                    <h5></h5>
-                  </td>
-                  <td>
-                    <ul>
-                      <li>Developed an Android app that made factory testing of DragonBoard devices 4x faster</li>
-                      <li>Compiled and flashed Android onto new DragonBoard development platforms</li>
-                      <li>Implemented a secure update utility in Java for flashing Qualcomm devices</li>
-                    </ul>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          <hr>
-            <div class="job-row">
-              <table>
-                <tr>
-                  <td class="details-col">
-                    <h3><a href="https://sunnybrook.ca/research/content/?page&#x3D;sri-groups-fus">Sunnybrook Research Institute</a></h3>
-                    <br>
-                    <h4>Focused Ultrasound Research Student</h4>
-                    <br>
-                    <h5>Jul. 2014 - Aug. 2014</h5>
-                    <br>
-                    <h5></h5>
-                  </td>
-                  <td>
-                    <ul>
-                      <li>Analyzed biomedical signals using MATLAB for an experimental brain imaging modality</li>
-                      <li>Performed experiments with microbubble solutions and ultrasound transducers</li>
-                      <li>Sped up analysis of animal experiments by 10x by developing vision processing scripts</li>
-                    </ul>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          <hr>
-      </div>
-      <div class="spacer_col"></div>
-      <div class="small_col">
-        <div class="header-row">
-          <h1>Education</h1>
-        </div>
-          <div class="employer-row">
+      <div class="Sidebar">
+        <h2>Education</h2>
+          <div class="SidebarItem">
             <h3>McMaster University</h3>
-            <br>
             <h4>
               Bachelor of Engineering<br>Software Engineering
             </h4>
-            <br>
             <h5>Sep. 2014 - Present</h5>
-            <br>
             <p style="margin-top: 4px">
-              3.1/4.0 Equivalent GPA
-              <br>
+              <em>3.1/4.0 Equivalent GPA</em><br>
               Expected completion: April 2020
             </p>
           </div>
-        <div class="header-row">
-          <h1>Projects</h1>
-        </div>
-          <div class="employer-row">
+        <h2>Projects</h2>
+          <div class="SidebarItem">
             <h3>
               <a href="">
                 Software Suppoort for Psychology Research
               </a>
             </h3>
-            <br>
-            <h4>Cognitive Science of Memory and Attention (Milliken Lab)</h4>
-            <br>
+              <h4>Cognitive Science of Memory and Attention (Milliken Lab)</h4>
             <h5>Sep. 2019 - Present</h5>
-            <br>
             <p style="margin-top: 4px">
               Lead code reviews with experimental psychologists to identify errors and improve code quality of computer experiments. Automated processing of experiment audio saving 100&#x27;s of researcher hours.
             </p>
           </div>
-          <hr>
-          <div class="employer-row">
+          <hr />
+          <div class="SidebarItem">
             <h3>
               <a href="">
                 Anterior EEG Cross-Frequency Correlation in Preoperative Anxiety
               </a>
             </h3>
-            <br>
-            <h4>J. Sriranjan, C. Chow,<br>R. Marks, &amp; L. Schmidt</h4>
-            <br>
+              <h4>J. Sriranjan, C. Chow,<br>R. Marks, &amp; L. Schmidt</h4>
             <h5>Mar. 2019</h5>
-            <br>
             <p style="margin-top: 4px">
               Developed signal processing algorithms to isolate EEG activity levels in pediatric surgery patients before surgery to examine anxiety.
             </p>
           </div>
-          <hr>
-          <div class="employer-row">
+          <hr />
+          <div class="SidebarItem">
             <h3>
               <a href="https://devpost.com/software/project-julius-2br2v">
                 Project Julius - Epilepsy Safety Tool
               </a>
             </h3>
-            <br>
-            <h4>1st Place at Deltahacks</h4>
-            <br>
+              <h4>1st Place at Deltahacks</h4>
             <h5>Feb. 2015</h5>
-            <br>
             <p style="margin-top: 4px">
               Project Julius protects people with photosensitive epilepsy from flashing content that could cause a seizure by detecting and blocking it in less than a second. Built using Python and OpenCV.
             </p>
           </div>
-          <hr>
+          <hr />
+      </div>
     </div>
-  </div>
-</div>
-</body>
-<style>
-.details-col {
-  vertical-align: top;
-  width: 33.33%;
-}
-.marrkdown-body .outer-table {
-  display: table;
-}
-.markdown-body table {
-  border: 0;
-  display: table;
-}
-.markdown-body .header-row {
-  border-bottom: 3px solid #24292e;
-  display: inline-block;
-  width: 100%;
-  line-height: 1.25;
-}
-.markdown-body .job-row {
-  display: inline-block;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  line-height: normal;
-}
-.markdown-body .job-row td {
-  padding-top: 4px;
-  padding-bottom: 0px;
-}
-.markdown-body .header-row h1 {
-  font-size: 2.5em;
-  margin: 0.5em 0
-}
-.markdown-body .header-row h2 {
-  margin-top: 5em;
-}
-.markdown-body .employer-row {
-  line-height: normal;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-.markdown-body .role-row td {
-  padding-bottom: 2px;
-}
-.markdown-body ul,
-.markdown-body p {
-  margin-bottom: 5px;
-  margin-top: 5px;
-  font-size: 0.95em;
-  font-family: "Helvetica";
-  font-weight: 400;
-}
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
-  margin-bottom: 3px;
-  margin-top: 3px;
-}
-.markdown-body table ul {
-  padding-left: 1em;
-}
-.markdown-body {
-  margin: 0;
-}
-</style>
-<style>
-.markdown-body {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  color: #24292e;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
-  line-height: 1.5;
-  word-wrap: break-word
-}
-.markdown-body a {
-  background-color: transparent
-}
-.markdown-body a:active,
-.markdown-body a:hover {
-  outline-width: 0
-}
-.markdown-body * {
-  box-sizing: border-box
-}
-.markdown-body a {
-  color: #24292e;
-  old-color: #0366d6;
-  text-decoration: none
-}
-.markdown-body a:hover {
-  text-decoration: underline
-}
-.markdown-body table {
-  border-spacing: 0;
-  border-collapse: collapse;
-  width: 100%;
-}
-.markdown-body td {
-  padding: 0;
-}
-.markdown-body tr {
-  width: 100%;
-}
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
-  margin-top: 0;
-  margin-bottom: 0;
-  display: inline
-}
-.markdown-body h1 {
-  font-size: 32px;
-  font-weight: 600
-}
-.markdown-body h2 {
-  font-size: 24px;
-  font-weight: 600
-}
-.markdown-body h3 {
-  font-size: 20px;
-  font-weight: 600
-}
-.markdown-body h4 {
-  font-size: 16px;
-  font-weight: 400
-}
-.markdown-body h5 {
-  font-size: 14px;
-  font-weight: 400
-}
-.markdown-body h6 {
-  font-size: 12px;
-  font-weight: 600
-}
-.markdown-body ul {
-  padding-left: 0
-}
-.markdown-body code {
-  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 10px
-}
-.markdown-body::before {
-  display: table;
-  content: ""
-}
-.markdown-body::after {
-  display: table;
-  clear: both;
-  content: ""
-}
-.markdown-body>:first-child {
-  margin-top: 0 !important
-}
-.markdown-body>:last-child {
-  margin-bottom: 0 !important
-}
-.markdown-body a:not([href]) {
-  color: inherit;
-  text-decoration: none
-}
-.markdown-body ul {
-  padding-left: 2em
-}
-.markdown-body ul ul {
-  margin-top: 0;
-  margin-bottom: 0
-}
-.markdown-body li {
-  word-wrap: break-all
-}
-.markdown-body li+li {
-  margin-top: 0.5em
-}
-.markdown-body code {
-  padding: .2em .4em;
-  margin: 0;
-  font-size: 85%;
-  background-color: rgba(27, 31, 35, .05);
-  border-radius: 3px
-}
-@media print {
-  tr.vendorListHeading {
-    background-color: #1a4567 !important;
-    -webkit-print-color-adjust: exact;
-  }
-}
-@media print {
-  .vendorListHeading th {
-    color: white !important;
-  }
-}
-</style>
+  </body>
+
 </html>

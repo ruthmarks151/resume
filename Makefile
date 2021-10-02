@@ -1,5 +1,5 @@
 #!/bin/bash
-all: resume_2019-09-18.html resume_2020-01-05.html resume.html index.html
+all: resume_2021-07-13.html resume_2019-09-18.html resume_2020-01-05.html resume.html index.html
 
 index.html: resume.html
 	cp resume.html index.html
