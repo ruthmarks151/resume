@@ -2,7 +2,7 @@
 hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./helpers/monthFormat.js --data resume_2019-09-18.json resume.hbs
 -->
 
-<html>
+<html style="font-size: 15px">
   <head>
     <style>
       .Page {
@@ -23,16 +23,17 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
         width: 8.5in;
         height: 11in;
 
-        padding: var(--space-8);
+        padding: 1.2cm;
         margin: 0em;
 
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
         line-height: 1.1;
-        font-size: 16px;
+
         word-wrap: break-word;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         gap: var(--space-5);
       }
 
@@ -40,11 +41,28 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
         .Page {
           border-style: solid;
         }
+
+        body {
+          margin: 0;
+        }
       }
 
       @media only print {
+        @page {
+          size: 8.5in 11in;
+          margin: 0;
+        }
+
+        html {
+          margin: 0;
+          height: 100%;
+        }
+
         .Page {
-          padding-top: 0.375in;
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          gap: none;
         }
       }
 
@@ -60,7 +78,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
       .Page li,
       .Page a,
       .Page div {
-        font-family: 'Helvetica', 'Arial', sans-serif; 
+        font-family: 'Helvetica', 'Arial', sans-serif;
         color: #444;
         margin: 0;
         text-decoration: none;
@@ -115,7 +133,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
       .Page span,
       .Page li,
       .Page a {
-        font-size: 0.9375rem;
+        font-size: 1rem;
         line-height: 1.25;
       }
 
@@ -204,12 +222,13 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
       }
 
       .WorkExperience {
-        flex-grow: 1;
-        width: 5.5in;
+        flex-grow: 0;
+        width: 6in;
       }
 
-      .JobRow {
+      div.JobRow {
         display: flex;
+        margin-top: var(--space-4);
       }
 
       .JobRow--large {
@@ -240,7 +259,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        max-height: 60px;
+        max-height: 50px;
       }
 
       .JobRow--small .JobRow__summary h5 {
@@ -248,7 +267,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
       }
 
       .Sidebar {
-        flex-grow: 0;
+        flex-grow: 1;
         flex-basis: 14rem;
       }
 
@@ -256,9 +275,20 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
         display: flex;
         flex-direction: column;
       }
+
+      .Footer {
+        align-self: center;
+        font-size: 0.875rem;
+        font-style: italic;
+      }
+
+      .Footer code {
+        font-style: normal;
+      }
+
     </style>
   </head>
-  <body class="Page">
+  <body><div class="Page">
       <header class="Header">
         <div class="Header__left">
           <h1 class="Header__name">
@@ -293,16 +323,14 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
                 <h5>Mar. 2020 - Present</h5>
                 <h5>Toronto, ON</h5>
               </div>
-              <div class="JobRow__bullets">
-                <ul>
-                    <li>Developed major features with React and Ruby, using Kotlin/Swift to integrate web and patient apps</li>
-                    <li>Lead rapid design sprints to design and develop digital vaccine booklet projects and health provider search</li>
-                    <li>Created browser based image processing tools used to extract 100&#x27;s of new clinician&#x27;s signatures</li>
-                    <li>Monitored #medic-operations Slack channel to ensure success of new features and help troubleshoot</li>
-                    <li>Collaborated with product teams to arrive at feature scopes that maximize return on developer effort</li>
-                    <li>Initiated new meetings to prioritize open pull requests and to run pre/post-mortems on large launches</li>
-                </ul>
-              </div>
+              <ul class="JobRow__bullets">
+                  <li>Developed major features with React and Ruby, using Kotlin/Swift to integrate web and mobile apps</li>
+                  <li>Lead rapid design sprints to develop digital vaccine booklet projects and health provider search</li>
+                  <li>Created browser based image processing tools used to extract 100&#x27;s of new clinician&#x27;s signatures</li>
+                  <li>Monitored #medic-operations Slack channel to help troubleshoot and ensure success of new features</li>
+                  <li>Collaborated with product teams to arrive at feature scopes that maximize return on developer effort</li>
+                  <li>Initiated new meetings to prioritize open pull requests and to run pre/post-mortems on large launches</li>
+              </ul>
             </div>
           <hr />
             <div class="JobRow JobRow--large">
@@ -312,13 +340,11 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
                 <h5>May 2021 - Present</h5>
                 <h5>Toronto, ON</h5>
               </div>
-              <div class="JobRow__bullets">
-                <ul>
-                    <li>Assisted on development of a platform of interactive educational modules for 50,000 nursing students</li>
-                    <li>Converted an AngularJS proof of concept to a modular React app supporting many educational modules</li>
-                    <li>Planned and executed a devops strategy to deliver the app and video assets reliably and cost efficiently</li>
-                </ul>
-              </div>
+              <ul class="JobRow__bullets">
+                  <li>Assisted on development of a platform of interactive educational modules for 50,000 nursing students</li>
+                  <li>Converted an AngularJS proof-of-concept to a modular React app supporting many educational modules</li>
+                  <li>Planned and executed a dev-ops strategy to deliver the app and video assets reliably and cost efficiently</li>
+              </ul>
             </div>
           <hr />
             <div class="JobRow JobRow--large">
@@ -328,14 +354,12 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
                 <h5>May 2019 - Oct. 2019</h5>
                 <h5>Toronto, ON</h5>
               </div>
-              <div class="JobRow__bullets">
-                <ul>
-                    <li>Developed radiology and medical practice management software using Ruby on Rails and Ember JS</li>
-                    <li>Reverse engineered OAuth and REST APIs using packet analysis to integrate with another medical records system</li>
-                    <li>Integrated clinic phone systems with Adracare, reducing call times and improving patient experience</li>
-                    <li>Reduced developer setup time from a day to 20 minutes by dockerizing the application</li>
-                </ul>
-              </div>
+              <ul class="JobRow__bullets">
+                  <li>Developed radiology and medical practice management software using Ruby on Rails and Ember JS</li>
+                  <li>Reverse engineered OAuth and REST APIs using packet analysis to integrate with another medical records system</li>
+                  <li>Integrated clinic phone systems with Adracare, reducing call times and improving patient experience</li>
+                  <li>Reduced developer setup time from a day to 20 minutes by dockerizing the application</li>
+              </ul>
             </div>
           <hr />
             <div class="JobRow JobRow--small">
@@ -389,7 +413,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
             <h5>Sep. 2014 - Apr. 2020</h5>
             <p style="margin-top: 4px">
               <em>3.1/4.0 Equivalent GPA</em><br>
-              Courses in system design, software requirements, and testing
+              
             </p>
           </div>
         <h2>Projects</h2>
@@ -432,6 +456,9 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
           <hr />
       </div>
     </div>
-  </body>
+    <footer class="Footer">
+      This resume made with Handlebars, HTML, CSS, and nine unique <code>display:</code>&hairsp;<code>flex</code>es
+    </footer>
+  </div></body>
 
 </html>

@@ -2,7 +2,7 @@
 hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./helpers/monthFormat.js --data resume_2019-09-18.json resume.hbs
 -->
 
-<html>
+<html style="font-size: 15px">
   <head>
     <style>
       .Page {
@@ -23,16 +23,17 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
         width: 8.5in;
         height: 11in;
 
-        padding: var(--space-8);
+        padding: 1.2cm;
         margin: 0em;
 
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
         line-height: 1.1;
-        font-size: 16px;
+
         word-wrap: break-word;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         gap: var(--space-5);
       }
 
@@ -40,11 +41,28 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
         .Page {
           border-style: solid;
         }
+
+        body {
+          margin: 0;
+        }
       }
 
       @media only print {
+        @page {
+          size: 8.5in 11in;
+          margin: 0;
+        }
+
+        html {
+          margin: 0;
+          height: 100%;
+        }
+
         .Page {
-          padding-top: 0.375in;
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          gap: none;
         }
       }
 
@@ -60,7 +78,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
       .Page li,
       .Page a,
       .Page div {
-        font-family: 'Helvetica', 'Arial', sans-serif; 
+        font-family: 'Helvetica', 'Arial', sans-serif;
         color: #444;
         margin: 0;
         text-decoration: none;
@@ -115,7 +133,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
       .Page span,
       .Page li,
       .Page a {
-        font-size: 0.9375rem;
+        font-size: 1rem;
         line-height: 1.25;
       }
 
@@ -204,12 +222,13 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
       }
 
       .WorkExperience {
-        flex-grow: 1;
-        width: 5.5in;
+        flex-grow: 0;
+        width: 6in;
       }
 
-      .JobRow {
+      div.JobRow {
         display: flex;
+        margin-top: var(--space-4);
       }
 
       .JobRow--large {
@@ -240,7 +259,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        max-height: 60px;
+        max-height: 50px;
       }
 
       .JobRow--small .JobRow__summary h5 {
@@ -248,7 +267,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
       }
 
       .Sidebar {
-        flex-grow: 0;
+        flex-grow: 1;
         flex-basis: 14rem;
       }
 
@@ -256,9 +275,20 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
         display: flex;
         flex-direction: column;
       }
+
+      .Footer {
+        align-self: center;
+        font-size: 0.875rem;
+        font-style: italic;
+      }
+
+      .Footer code {
+        font-style: normal;
+      }
+
     </style>
   </head>
-  <body class="Page">
+  <body><div class="Page">
       <header class="Header">
         <div class="Header__left">
           <h1 class="Header__name">
@@ -283,14 +313,12 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
                 <h5>May 2019 - Present</h5>
                 <h5>Toronto, ON</h5>
               </div>
-              <div class="JobRow__bullets">
-                <ul>
-                    <li>Worked on a team that developed Adracare&#x27;s medical practice software using Ruby on Rails and Ember JS</li>
-                    <li>Performed research and production development to integrate clinics&#x27; phone systems with Adracare, reducing call times</li>
-                    <li>Reduced developer setup time from a day to 20 minutes by dockerizing the application</li>
-                    <li>Reverse engineered OAuth and REST APIs using packet analysis to integrate with another medical records system</li>
-                </ul>
-              </div>
+              <ul class="JobRow__bullets">
+                  <li>Worked on a team that developed Adracare&#x27;s medical practice software using Ruby on Rails and Ember JS</li>
+                  <li>Performed research and production development to integrate clinics&#x27; phone systems with Adracare, reducing call times</li>
+                  <li>Reduced developer setup time from a day to 20 minutes by dockerizing the application</li>
+                  <li>Reverse engineered OAuth and REST APIs using packet analysis to integrate with another medical records system</li>
+              </ul>
             </div>
           <hr />
             <div class="JobRow JobRow--large">
@@ -300,14 +328,12 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
                 <h5>Mar. 2017 - Nov. 2018</h5>
                 <h5></h5>
               </div>
-              <div class="JobRow__bullets">
-                <ul>
-                    <li>Spun off a contract solution for investment portfolio managers into a SAAS business</li>
-                    <li>Independently developed a complete minimum viable product using Django</li>
-                    <li>Created Postgres views to derive position data causing a 4x speedup over Python </li>
-                    <li>Sold intellectual property and code to a customer bringing the software in-house </li>
-                </ul>
-              </div>
+              <ul class="JobRow__bullets">
+                  <li>Spun off a contract solution for investment portfolio managers into a SAAS business</li>
+                  <li>Independently developed a complete minimum viable product using Django</li>
+                  <li>Created Postgres views to derive position data causing a 4x speedup over Python </li>
+                  <li>Sold intellectual property and code to a customer bringing the software in-house </li>
+              </ul>
             </div>
           <hr />
             <div class="JobRow JobRow--large">
@@ -317,14 +343,12 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
                 <h5>May 2016 - Aug. 2016</h5>
                 <h5></h5>
               </div>
-              <div class="JobRow__bullets">
-                <ul>
-                    <li>Lead a co-op team in development of a Java natural language bot for personal banking</li>
-                    <li>Served as developer and Natural Language specialist for all co-op Android team </li>
-                    <li>Developed prototype natural language search solution to compete with vendor proposals</li>
-                    <li>Collaborated in a Scrum team with story writing, sprint planning, and code review</li>
-                </ul>
-              </div>
+              <ul class="JobRow__bullets">
+                  <li>Lead a co-op team in development of a Java natural language bot for personal banking</li>
+                  <li>Served as developer and Natural Language specialist for all co-op Android team </li>
+                  <li>Developed prototype natural language search solution to compete with vendor proposals</li>
+                  <li>Collaborated in a Scrum team with story writing, sprint planning, and code review</li>
+              </ul>
             </div>
           <hr />
             <div class="JobRow JobRow--large">
@@ -334,13 +358,11 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
                 <h5>May 2015 - Jul. 2015</h5>
                 <h5></h5>
               </div>
-              <div class="JobRow__bullets">
-                <ul>
-                    <li>Developed an Android app that made factory testing of DragonBoard devices 4x faster</li>
-                    <li>Compiled and flashed Android onto new DragonBoard development platforms</li>
-                    <li>Implemented a secure update utility in Java for flashing Qualcomm devices</li>
-                </ul>
-              </div>
+              <ul class="JobRow__bullets">
+                  <li>Developed an Android app that made factory testing of DragonBoard devices 4x faster</li>
+                  <li>Compiled and flashed Android onto new DragonBoard development platforms</li>
+                  <li>Implemented a secure update utility in Java for flashing Qualcomm devices</li>
+              </ul>
             </div>
           <hr />
             <div class="JobRow JobRow--large">
@@ -350,13 +372,11 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
                 <h5>Jul. 2014 - Aug. 2014</h5>
                 <h5></h5>
               </div>
-              <div class="JobRow__bullets">
-                <ul>
-                    <li>Analyzed biomedical signals using MATLAB for an experimental brain imaging modality</li>
-                    <li>Performed experiments with microbubble solutions and ultrasound transducers</li>
-                    <li>Sped up analysis of animal experiments by 10x by developing vision processing scripts</li>
-                </ul>
-              </div>
+              <ul class="JobRow__bullets">
+                  <li>Analyzed biomedical signals using MATLAB for an experimental brain imaging modality</li>
+                  <li>Performed experiments with microbubble solutions and ultrasound transducers</li>
+                  <li>Sped up analysis of animal experiments by 10x by developing vision processing scripts</li>
+              </ul>
             </div>
           <hr />
       </div>
@@ -415,6 +435,9 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
           <hr />
       </div>
     </div>
-  </body>
+    <footer class="Footer">
+      This resume made with Handlebars, HTML, CSS, and nine unique <code>display:</code>&hairsp;<code>flex</code>es
+    </footer>
+  </div></body>
 
 </html>

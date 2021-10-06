@@ -33,10 +33,10 @@
       "location": "Toronto, ON",
       "summary": "Worked on Akira's patient experience team to deliver virtual healthcare to eight-hundred thousand Canadians using React, Node, and Ruby",
       "highlights": [
-        "Developed major features with React and Ruby, using Kotlin/Swift to integrate web and patient apps",
-        "Lead rapid design sprints to design and develop digital vaccine booklet projects and health provider search",
+        "Developed major features with React and Ruby, using Kotlin/Swift to integrate web and mobile apps",
+        "Lead rapid design sprints to develop digital vaccine booklet projects and health provider search",
         "Created browser based image processing tools used to extract 100's of new clinician's signatures",
-        "Monitored #medic-operations Slack channel to ensure success of new features and help troubleshoot",
+        "Monitored #medic-operations Slack channel to help troubleshoot and ensure success of new features",
         "Collaborated with product teams to arrive at feature scopes that maximize return on developer effort",
         "Initiated new meetings to prioritize open pull requests and to run pre/post-mortems on large launches"
       ]
@@ -51,8 +51,8 @@
       "summary": "",
       "highlights": [
         "Assisted on development of a platform of interactive educational modules for 50,000 nursing students",
-        "Converted an AngularJS proof of concept to a modular React app supporting many educational modules",
-        "Planned and executed a devops strategy to deliver the app and video assets reliably and cost efficiently"
+        "Converted an AngularJS proof-of-concept to a modular React app supporting many educational modules",
+        "Planned and executed a dev-ops strategy to deliver the app and video assets reliably and cost efficiently"
       ]
     },
     {
@@ -116,8 +116,7 @@
       "startDate": "2014-09-01",
       "endDate": "2020-04-31",
       "gpa": "3.1",
-      "courses": [],
-      "summary": "Courses in system design, software requirements, and testing"
+      "courses": []
     }
   ],
   "publications": [
