@@ -77,7 +77,8 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
       .Page ul,
       .Page li,
       .Page a,
-      .Page div {
+      .Page div,
+      .Page footer {
         font-family: 'Helvetica', 'Arial', sans-serif;
         color: #444;
         margin: 0;
@@ -132,7 +133,8 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
       .Page p,
       .Page span,
       .Page li,
-      .Page a {
+      .Page a,
+      .Page footer {
         font-size: 1rem;
         line-height: 1.25;
       }
@@ -278,8 +280,6 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
 
       .Footer {
         align-self: center;
-        font-size: 0.875rem;
-        font-style: italic;
       }
 
       .Footer code {
@@ -325,11 +325,11 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
               </div>
               <ul class="JobRow__bullets">
                   <li>Developed major features with React and Ruby, using Kotlin/Swift to integrate web and mobile apps</li>
-                  <li>Lead rapid design sprints to develop digital vaccine booklet projects and health provider search</li>
-                  <li>Created browser based image processing tools used to extract 100&#x27;s of new clinician&#x27;s signatures</li>
+                  <li>Lead rapid design sprints to develop a digital vaccine booklet projects and health provider search using GraphQL</li>
+                  <li>Created browser based image processing tools used to extract 100&#x27;s of new clinician&#x27;s signatures from photos</li>
                   <li>Monitored #medic-operations Slack channel to help troubleshoot and ensure success of new features</li>
-                  <li>Collaborated with product teams to arrive at feature scopes that maximize return on developer effort</li>
-                  <li>Initiated new meetings to prioritize open pull requests and to run pre/post-mortems on large launches</li>
+                  <li>Represented development in product meetings to extract implicit requirements and produce dev-ready feature scopes</li>
+                  <li>Initiated new meetings to prioritize open pull requests and to run pre/post-mortems on large releases</li>
               </ul>
             </div>
           <hr />
@@ -341,8 +341,8 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
                 <h5>Toronto, ON</h5>
               </div>
               <ul class="JobRow__bullets">
-                  <li>Assisted on development of a platform of interactive educational modules for 50,000 nursing students</li>
-                  <li>Converted an AngularJS proof-of-concept to a modular React app supporting many educational modules</li>
+                  <li>Operationalized a platform for interactive educational modules, used by 50,000 Ontario nursing students</li>
+                  <li>Converted an AngularJS proof-of-concept to a modular React app supporting many content modules</li>
                   <li>Planned and executed a dev-ops strategy to deliver the app and video assets reliably and cost efficiently</li>
               </ul>
             </div>
@@ -425,7 +425,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
             </h3>
             <h5>September 2020 - January 2021</h5>
             <p style="margin-top: 4px">
-              Augmented a second hand espresso machine with new controls electronics enabling remote control and precise weight based dispensing of espresso. Built using Typescript, Raspberry Pi, and a Breville
+              Augmented a second hand espresso machine with new controls electronics enabling remote control and precise weight based dispensing of espresso. Built using Typescript, Raspberry Pi, and a Breville Dual Boiler
             </p>
           </div>
           <hr />
@@ -447,7 +447,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
                 Software Suppoort for Psychology Research
               </a>
             </h3>
-              <h4>Cognitive Science of Memory and Attention (Milliken Lab)</h4>
+              <h4>McMaster Cognitive Science of Memory and Attention Lab</h4>
             <h5>Sep. 2019 - April 2020</h5>
             <p style="margin-top: 4px">
               Lead code reviews with experimental psychologists to identify errors and improve code quality of computer experiments. Automated processing of experiment audio saving 100&#x27;s of researcher hours.
