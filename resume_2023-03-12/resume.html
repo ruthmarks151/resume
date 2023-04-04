@@ -1,0 +1,544 @@
+<!--
+hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./helpers/monthFormat.js --data resume_2019-09-18.json resume.hbs
+-->
+
+<html style="font-size: 15px">
+  <head>
+    <style>
+      .Page {
+
+        --space-1: 2px;
+        --space-2: 4px;
+        --space-3: 6px;
+        --space-4: 8px;
+        --space-5: 12px;
+        --space-6: 16px;
+        --space-7: 20px;
+        --space-8: 24px;
+        --space-9: 28px;
+        --space-10: 32px;
+        --space-11: 40px;
+        --space-12: 48px;
+
+        width: 8.5in;
+        height: 11in;
+
+        padding: 1.2cm;
+        margin: 0em;
+
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        line-height: 1.1;
+
+        word-wrap: break-word;
+        display: -webkit-box; /* wkhtmltopdf uses this one */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: var(--space-5);
+      }
+
+      @media only screen {
+        .Page {
+          border-style: solid;
+        }
+
+        body {
+          margin: 0;
+        }
+      }
+
+      @media only print {
+        @page {
+          size: 8.5in 11in;
+          margin: 0;
+        }
+
+        html {
+          margin: 0;
+          height: 100%;
+        }
+
+        .Page {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          gap: none;
+        }
+      }
+
+      .Page h1,
+      .Page h2,
+      .Page h3,
+      .Page h4,
+      .Page h5,
+      .Page h6,
+      .Page p,
+      .Page span,
+      .Page ul,
+      .Page li,
+      .Page a,
+      .Page div,
+      .Page footer {
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        color: #444;
+        margin: 0;
+        text-decoration: none;
+      }
+
+      .Page h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        border-bottom: 3px solid #24292e;
+        margin-bottom: var(--space-2)
+      }
+
+      .Page h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: var(--space-2);
+      }
+
+      .Page h4 {
+        font-weight: 600;
+        margin-bottom: var(--space-2);
+      }
+
+      .Page h5 {
+        font-weight: 500;
+        margin-bottom: var(--space-1);
+      }
+
+      .Page ul {
+        padding: 0 0 0 var(--space-4);
+      }
+
+      .Page li {
+        margin: var(--space-2) 0;
+      }
+
+      .Page a {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+
+      .Page h3 a {
+        font-size: inherit;
+        line-height: 1.1;
+      }
+
+      .Page p {
+        margin-bottom: var(--space-2);
+      }
+
+      .Page p,
+      .Page span,
+      .Page li,
+      .Page a,
+      .Page footer {
+        font-size: 1rem;
+        line-height: 1.1;
+      }
+
+      .Header {
+        width: 100%;
+        display: -webkit-box; /* wkhtmltopdf uses this one */
+        display: flex;
+        align-items: stretch;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        line-height: 1.05
+      }
+
+      .Header .Header__left {
+        width: auto;
+        flex-grow: 1;
+        margin: auto;
+      }
+
+      .Header .Header__name {
+        font-size: 4rem;
+      }
+
+      .Header .Header__contact-info {
+        flex-grow: 0;
+        margin: 0;
+        display: -webkit-box; /* wkhtmltopdf uses this one */
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 0.125em;
+        text-align: right;
+        font-weight: 400;
+        font-size: 0.75rem;
+      }
+
+      .Header .Header__contact-info > * {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: baseline;
+      }
+
+      .Header .Header__contact-info .icon {
+        width: var(--space-6);
+        height: var(--space-6);
+        margin: auto;
+      }
+
+      .Header .Header__contact-info .icon + span {
+        margin-left: var(--space-1)
+      }
+
+      div.Summary {
+        text-align: left;
+        font-weight: 400;
+        font-size: 1.25rem;
+        /* margin: 0 auto; */
+        /* text-align: justify; */
+        /* border: 1px solid grey; */
+        /* padding: var(--space-3); */
+      }
+
+      .Body {
+        display: -webkit-box; /* wkhtmltopdf uses this one */
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: var(--space-10);
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+
+      .Body hr {
+        border-top: 1px solid #24292e;
+        width: 100%;
+        margin: 0;
+      }
+
+      .Body>div {
+        display: -webkit-box; /* wkhtmltopdf uses this one */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .WorkExperience {
+        flex-grow: 0;
+        width: 7in;
+      }
+
+      div.JobRow {
+        display: -webkit-box; /* wkhtmltopdf uses this one */
+        display: flex;
+        margin-top: var(--space-4);
+      }
+
+      .JobRow--large {
+        flex-direction: row;
+        gap: var(--space-6);
+      }
+
+      .JobRow--large .JobRow__summary {
+        flex-grow: 0;
+        display: -webkit-box; /* wkhtmltopdf uses this one */
+        display: flex;
+        width: 10rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+      }
+
+      .JobRow .JobRow__bullets {
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+
+      .JobRow--small {
+        flex-direction: column;
+      }
+
+      .JobRow--small .JobRow__summary {
+        display: -webkit-box; /* wkhtmltopdf uses this one */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-height: 50px;
+      }
+
+      .JobRow--small .JobRow__summary div + div {
+        flex-grow: 1;
+        display: -webkit-box; /* wkhtmltopdf uses this one */
+        display: flex;
+        width: 10rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+      }
+
+      .JobRow--small .JobRow__summary h5 {
+        align-self: flex-end;
+      }
+
+      .Sidebar {
+        flex-grow: 1;
+        flex-basis: 14rem;
+      }
+
+      .SidebarItem {
+        display: -webkit-box; /* wkhtmltopdf uses this one */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .Footer {
+        align-self: center;
+      }
+
+      .Footer code {
+        font-style: normal;
+      }
+
+    </style>
+  </head>
+  <body><div class="Page">
+      <header class="Header">
+        <div class="Header__left">
+          <h1 class="Header__name">
+            Ruth Ryan Marks
+          </h1>
+        </div>
+        <div class="Header__contact-info">
+          <span>21 Grange Ave, Toronto, ON, M5T 1C6</span>
+          <span>ruthmarks151@gmail.com</span>
+          <span>(416) 678-0185</span>
+            <a href="https://github.com/ryanmarks">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path
+                    fill="#000000"
+                    d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"
+                  ></path>
+                </svg>
+              <span>ryanmarks</span>
+            </a>
+        </div>
+      </header>
+        <div class="Summary">Team lead with 3.5 years experience building health-tech products in TypeScript, React, and Ruby</div>
+    <div class="Body">
+      <div class="WorkExperience">
+        <h2>Work Experience</h2>
+            <div class="JobRow JobRow--large">
+              <div class="JobRow__summary">
+                <h3><a href="https://seamless.md/">SeamlessMD</a></h3>
+                <h4>Lead Software Developer</h4>
+                <h5>Mar. 2023 - Present</h5>
+                <h4>Senior Software Developer</h4>
+                <h5>Dec. 2021 - Mar. 2023</h5>
+
+                <!-- <h4>Lead Software Developer</h4>
+                <h4>Senior Software Developer</h4>
+                <h5>Dec. 2021 - Present</h5> -->
+
+                <h5>Toronto, ON</h5>
+              </div>
+              <ul class="JobRow__bullets">
+                <li>
+                  Led a team that delivered high-impact projects in SeamlessMD's
+                  patient apps and internal tools using TypeScript, React,
+                  React Native, and Ruby on Rails.
+                </li>
+                <li>
+                  Enhanced release quality and limited downtime by
+                  implementing continuous integration tooling,
+                  conducting regular code reviews, and adopting
+                  GitFlow-style release management.
+                </li>
+                <li>
+                  Architected the migration of React and React Native
+                  patient apps to a TypeScript monorepo, with shared packages
+                  for common logic, improving feature delivery pace and
+                  reducing possible bug surface
+                </li>
+                <li>
+                  Prepared and delivered training, including lectures
+                  and pairing sessions to teach non-technical team members
+                  how to use Ruby and Typescript to improve the tools
+                  they use every day.
+                </li>
+                <li>
+                  Integrated Bluetooth medical devices
+                  with existing health-check surveys within a tight
+                  2-month proposal deadline
+                </li>
+                <!-- <li>
+                  Improved software correctness by adding whole stack
+                  typechecking to SeamlessMD's conent management system,
+                  joining GraphQL Ruby, Apollo, and TypeScript.
+                </li> -->
+              </ul>
+            </div>
+          <hr />
+            <div class="JobRow JobRow--large">
+              <div class="JobRow__summary">
+                <h3><a href="https://akira.md/">TELUS Health<br>Virtual Care<br>(Formerly Akira)</a></h3>
+                <h4>Software Developer</h4>
+                <h5>Mar. 2020 - Nov. 2021</h5>
+                <h5>Toronto, ON</h5>
+              </div>
+              <ul class="JobRow__bullets">
+                  <li>Worked on Akira&#x27;s patient experience team to deliver virtual healthcare to eight-hundred thousand Canadians</li>
+                  <li>Developed major features with React and Ruby, using Kotlin/Swift to integrate web and mobile apps</li>
+                  <li>Created browser based image processing tools used to extract 100&#x27;s of new clinician&#x27;s signatures from photos</li>
+                  <li>Represented development in product meetings to extract implicit requirements and produce dev-ready feature scopes</li>
+              </ul>
+            </div>
+          <hr />
+            <div class="JobRow JobRow--large">
+              <div class="JobRow__summary">
+                <h3><a href="https://adracare.com/">Adracare Inc.</a></h3>
+                <h4>R&amp;D Contractor,<br>Software R&amp;D Intern</h4>
+                <h5>May 2019 - Oct. 2019</h5>
+                <h5>Toronto, ON</h5>
+              </div>
+              <ul class="JobRow__bullets">
+                  <li>Developed radiology and medical practice management software using Ruby on Rails and Ember JS</li>
+                  <li>Reverse engineered OAuth and REST APIs using packet analysis to integrate with another medical records system</li>
+                  <li>Integrated clinic phone systems with Adracare, reducing call times and improving patient experience</li>
+              </ul>
+            </div>
+          <hr />
+            <div class="JobRow JobRow--small">
+              <div class="JobRow__summary">
+                <div>
+                  <h3><a href="">PortfolioLink</a></h3>
+                  <h4>Sole Proprietor</h4>
+                </div>
+                <div>
+                  <h5>Mar. 2017 - Nov. 2018</h5>
+                  <h5>Hamilton, ON</h5>
+                </div>
+              </div>
+              <p>Built and sold bespoke analytics software for investment portfolio managers</p>
+            </div>
+          <hr />
+            <div class="JobRow JobRow--small">
+              <div class="JobRow__summary">
+                <div>
+                  <h3><a href="https://www.cibc.com/en/about-cibc/careers/innovation-history.html">CIBC Live Labs</a></h3>
+                  <h4>Innovation Engineer Co-op</h4>
+                </div>
+                <div>
+                  <h5>May 2016 - Aug. 2016</h5>
+                  <h5>Toronto, ON</h5>
+                </div>
+              </div>
+              <p></p>
+            </div>
+          <hr />
+            <div class="JobRow JobRow--small">
+              <div class="JobRow__summary">
+                <div>
+                  <h3><a href="https://www.intrinsyc.com/">Intrinsyc Technologies</a></h3>
+                  <h4>Software Engineering Co-op</h4>
+                </div>
+                <div>
+                  <h5>May 2015 - Jul. 2015</h5>
+                  <h5>Vancouver, BC</h5>
+                </div>
+              </div>
+              <p></p>
+            </div>
+          <hr />
+            <div class="JobRow JobRow--small">
+              <div class="JobRow__summary">
+                <div>
+                  <h3><a href="https://sunnybrook.ca/research/content/?page&#x3D;sri-groups-fus">Sunnybrook Research Institute</a></h3>
+                  <h4>Focused Ultrasound Research Student</h4>
+                </div>
+                <div>
+                  <h5>Jul. 2014 - Aug. 2014</h5>
+                  <h5>Toronto, ON</h5>
+                </div>
+              </div>
+              <p></p>
+            </div>
+          <hr />
+      </div>
+      <div class="Sidebar">
+        <h2>Education</h2>
+          <div class="SidebarItem">
+            <h3>McMaster University</h3>
+            <h4>
+              Bachelor of Engineering<br>Software Engineering
+            </h4>
+            <h5>Sep. 2014 - Apr. 2020</h5>
+            <p style="margin-top: 4px">
+              <em>3.1/4.0 Equivalent GPA</em><br>
+
+            </p>
+          </div>
+        <h2>Projects</h2>
+          <div class="SidebarItem">
+            <h3><a href="">Interactive Nursing Education<br/>(Freelance Project)</a></h3>
+            <h5>May 2021 - Aug. 2021</h5>
+            <p style="margin-top: 4px">
+              Operationalized a platform for interactive nursing education used by 50,000 students globally.
+              Converted an AngularJS proof-of-concept to a modular React app and established dev-ops strategy
+            </p>
+          </div>
+          <hr />
+          <div class="SidebarItem">
+            <h3>
+              <a href="">
+                Gravimetric Dosing Espresso Machine
+              </a>
+            </h3>
+            <h5>September 2020 - January 2021</h5>
+            <p style="margin-top: 4px">
+              Augmented a second hand espresso machine with new controls
+              electronics enabling precise weight based
+              dispensing of espresso. Built using Typescript, Raspberry Pi, and a Breville Dual Boiler
+            </p>
+          </div>
+          <hr />
+          <!-- <div class="SidebarItem">
+            <h3>
+              <a href="">
+                Wildfire Alarm System
+              </a>
+            </h3>
+            <h5>Sep. 2019 - Apr. 2020</h5>
+            <p style="margin-top: 4px">
+              Wildfire Alarm is a web app and wireless network of sensors to monitor for wildfires built in a serverless microservices architecture using Google Cloud Functions, ML Kit, and  React
+            </p>
+          </div>
+          <hr /> -->
+          <div class="SidebarItem">
+            <h3>
+              <a href="">
+                Software Suppoort for Psychology Research
+              </a>
+            </h3>
+              <h4>McMaster Cognitive Science of Memory and Attention Lab</h4>
+            <h5>Sep. 2019 - April 2020</h5>
+            <p style="margin-top: 4px">
+              Lead code reviews with experimental psychologists to identify errors
+              and improve code quality of computer experiments.
+              <!-- Automated processing of experiment audio saving 100's of researcher hours. -->
+            </p>
+          </div>
+          <hr />
+      </div>
+    </div>
+    <footer class="Footer">
+      This resume made with HTML, CSS, and nine unique <code>display:</code>&hairsp;<code>flex</code>es
+    </footer>
+  </div></body>
+
+</html>
