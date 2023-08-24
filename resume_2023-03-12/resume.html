@@ -23,7 +23,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
         width: 8.5in;
         height: 11in;
 
-        padding: 1.2cm;
+        padding: 0cm;
         margin: 0em;
 
         -ms-text-size-adjust: 100%;
@@ -87,7 +87,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
       }
 
       .Page h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 600;
         border-bottom: 3px solid #24292e;
         margin-bottom: var(--space-2)
@@ -173,7 +173,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
         gap: 0.125em;
         text-align: right;
         font-weight: 400;
-        font-size: 0.75rem;
+        font-size: 0.7rem;
       }
 
       .Header .Header__contact-info > * {
@@ -231,13 +231,13 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
 
       .WorkExperience {
         flex-grow: 0;
-        width: 7in;
+        width: 7.25in;
       }
 
       div.JobRow {
         display: -webkit-box; /* wkhtmltopdf uses this one */
         display: flex;
-        margin-top: var(--space-4);
+        margin-top: var(--space-3);
       }
 
       .JobRow--large {
@@ -311,47 +311,63 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
       <header class="Header">
         <div class="Header__left">
           <h1 class="Header__name">
-            Ruth Ryan Marks
+            Ruth Marks
           </h1>
         </div>
         <div class="Header__contact-info">
           <span>21 Grange Ave, Toronto, ON, M5T 1C6</span>
           <span>ruthmarks151@gmail.com</span>
           <span>(416) 678-0185</span>
-            <a href="https://github.com/ryanmarks">
+            <a href="https://github.com/ruthmarks151">
                 <svg class="icon" viewBox="0 0 24 24">
                   <path
                     fill="#000000"
                     d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"
                   ></path>
                 </svg>
-              <span>ryanmarks</span>
+              <span>ruthmarks151</span>
             </a>
         </div>
       </header>
-        <div class="Summary">Team lead with 3.5 years experience building health-tech products in TypeScript, React, and Ruby</div>
+    <!-- <div class="Summary">Developer with 3.5 years experience with React and Ruby in health-tech seeking to build at greater scale</div> -->
     <div class="Body">
       <div class="WorkExperience">
-        <h2>Work Experience</h2>
+        <h2>Experience</h2>
+            <div class="JobRow JobRow--large">
+              <div class="JobRow__summary">
+                <h3>Freelance Sabbatical</h3>
+                <h4</h4>
+                <h5>May. 2023 - Present</h5>
+                <h5>Toronto, ON</h5>
+              </div>
+              <ul class="JobRow__bullets">
+                <li>
+                  <b>TypeScript Web Psychology Experiment Platform</b><br>
+                  Developed a TypeScript monorepo for building and deploying
+                  families of browser based psychology experiments.
+                  In use at McMaster University improving code quality and reuse
+                </li>
+                <li>
+                  <b>Rust Exhaust Fan Selection Web App</b><br>
+                  Built a full stack Rust application for the selection of chemical
+                  exhaust fans &ndash; modeling diverse fan physics with Rust traits
+                  and building web features with Axum and Yew
+                </li>
+              </ul>
+            </div>
+          <hr />
             <div class="JobRow JobRow--large">
               <div class="JobRow__summary">
                 <h3><a href="https://seamless.md/">SeamlessMD</a></h3>
-                <h4>Lead Software Developer</h4>
-                <h5>Mar. 2023 - Present</h5>
                 <h4>Senior Software Developer</h4>
-                <h5>Dec. 2021 - Mar. 2023</h5>
-
-                <!-- <h4>Lead Software Developer</h4>
-                <h4>Senior Software Developer</h4>
-                <h5>Dec. 2021 - Present</h5> -->
-
+                <h5>Dec. 2021 - Apr. 2023</h5>
                 <h5>Toronto, ON</h5>
               </div>
               <ul class="JobRow__bullets">
                 <li>
                   Led a team that delivered high-impact projects in SeamlessMD's
-                  patient apps and internal tools using TypeScript, React,
-                  React Native, and Ruby on Rails.
+                  remote patient monitoring apps and internal tools using
+                  TypeScript, React, React Native, and Ruby on Rails.
                 </li>
                 <li>
                   Enhanced release quality and limited downtime by
@@ -362,8 +378,8 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
                 <li>
                   Architected the migration of React and React Native
                   patient apps to a TypeScript monorepo, with shared packages
-                  for common logic, improving feature delivery pace and
-                  reducing possible bug surface
+                  for common logic, improving velocity and
+                  reducing bug surface
                 </li>
                 <li>
                   Prepared and delivered training, including lectures
@@ -372,9 +388,8 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
                   they use every day.
                 </li>
                 <li>
-                  Integrated Bluetooth medical devices
-                  with existing health-check surveys within a tight
-                  2-month proposal deadline
+                  Integrated Bluetooth medical devices with existing health-check
+                  surveys within a tight s2-month proposal deadline
                 </li>
                 <!-- <li>
                   Improved software correctness by adding whole stack
@@ -455,7 +470,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
               <p></p>
             </div>
           <hr />
-            <div class="JobRow JobRow--small">
+            <!-- <div class="JobRow JobRow--small">
               <div class="JobRow__summary">
                 <div>
                   <h3><a href="https://sunnybrook.ca/research/content/?page&#x3D;sri-groups-fus">Sunnybrook Research Institute</a></h3>
@@ -468,7 +483,7 @@ hbs --helper ./helpers/ifEquals.js --helper ./helpers/breaklines.js --helper ./h
               </div>
               <p></p>
             </div>
-          <hr />
+          <hr /> -->
       </div>
       <div class="Sidebar">
         <h2>Education</h2>
